@@ -7,7 +7,8 @@
   ],
   "scripts": {
     "start": "claudia create --name hello-world --region us-east-1 --handler main.handler",
-    "test": "claudia test-lambda"
+    "test": "claudia test-lambda",
+    "deploy": "claudia update"
   },
   "devDependencies": {
     "claudia": "^0.1.0"
