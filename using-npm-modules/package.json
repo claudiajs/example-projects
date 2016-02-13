@@ -1,0 +1,19 @@
+{
+  "name": "using-npm-modules",
+  "description": "ClaudiaJS hello-world example",
+  "private": true,
+  "files": [
+    "main.js"
+  ],
+  "scripts": {
+    "start": "claudia create --name using-npm-modules --region us-east-1 --handler main.handler",
+    "test": "claudia test-lambda",
+    "deploy": "claudia update"
+  },
+  "devDependencies": {
+    "claudia": "^0.1.0"
+  },
+  "dependencies": {
+    "superb": "^1.2.0"
+  }
+}
