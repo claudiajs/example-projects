@@ -1,0 +1,20 @@
+{
+  "name": "web-api-test",
+  "description": "Simple example that shows how to create WEB apis",
+  "private": true,
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "start": "claudia create --name web-api-test --region us-east-1 --api-module web",
+    "deploy": "claudia update"
+  },
+  "devDependencies": {
+    "claudia": "^0.1.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.3.0",
+    "claudia-api-builder": "0.0.1",
+    "superb": "^1.2.0"
+  }
+}
