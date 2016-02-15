@@ -1,4 +1,4 @@
-A trivial Node.js microservice example, that just returns a different superlative message each time, as a demonstration of using external NPM modules packaged with the Lamdba function. (In this case, the superlatives come from the [Superb](https://www.npmjs.com/package/superb) NPM module. 
+A trivial Node.js microservice example, that just returns a different superlative message each time, as a demonstration of using external NPM modules packaged with the Lambda function. (In this case, the superlatives come from the [Superb](https://www.npmjs.com/package/superb) NPM module. 
 
 To try it out, first [set up the credentials](https://github.com/claudiajs/claudia/blob/master/getting_started.md#configuring-access-credentials), then:
 
