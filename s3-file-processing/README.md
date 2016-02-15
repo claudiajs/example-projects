@@ -4,7 +4,7 @@ To try it out, first create a bucket on S3 where you'll upload the files (no spe
 
 1. install the dependencies using `npm install`
 2. create the function using `npm start`
-3. connect bucket events to the lambda function using `claudia add-s3-event-source --bucket BUCKET_NAME --prefix in/` (replace the `BUCKET_NAME` with your bucket name)
+3. run `claudia add-s3-event-source --bucket BUCKET_NAME --prefix in/` to connect bucket events to the lambda function using (replace the `BUCKET_NAME` with your bucket name) 
 4. upload a text file to your bucket into the /in folder
 5. check for the file in the /out folder on s3, should be uppercased
 
