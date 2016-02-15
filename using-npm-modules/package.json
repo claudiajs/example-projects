@@ -1,6 +1,6 @@
 {
   "name": "using-npm-modules",
-  "description": "ClaudiaJS hello-world example",
+  "description": "ClaudiaJS example for external modules",
   "private": true,
   "files": [
     "main.js"
