@@ -10,7 +10,7 @@
     "deploy": "claudia update"
   },
   "devDependencies": {
-    "claudia": "^0.1.0"
+    "claudia": "^0.2.0"
   },
   "dependencies": {
     "bluebird": "^3.3.0",
