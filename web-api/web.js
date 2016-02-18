@@ -12,6 +12,10 @@ api.get('/echo', function (request) {
 	'use strict';
 	return request;
 });
+api.post('/echo', function (request) {
+	'use strict';
+	return request;
+});
 api.get('/greet', function (request) {
 	'use strict';
 	return Promise.resolve(request.queryString.name + ' is ' + superb());

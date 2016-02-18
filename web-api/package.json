@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "bluebird": "^3.3.0",
-    "claudia-api-builder": "0.0.1",
+    "claudia-api-builder": "^0.1.0",
     "superb": "^1.2.0"
   }
 }
