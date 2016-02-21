@@ -1,5 +1,5 @@
 An example demonstrating how to customise success/error response codes and content types in a Web API connected to a Lambda function with Node.js and 
-Claudia.js. This example will serve HTML pages instead of the default `application/json` response type, and it changes error codes to 404 and 403, instead of the default 500. Finally, the search box redirects to Google using a 302 response code.
+Claudia.js. This example will serve HTML pages instead of the default `application/json` response type, and it changes error code to 403, instead of the default 500. Finally, the search box redirects to Github using a 302 response code.
 
 To try it out, first [set up the credentials](https://github.com/claudiajs/claudia/blob/master/getting_started.md#configuring-access-credentials), then:
 
