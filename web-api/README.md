@@ -1,4 +1,4 @@
-A simple example demonstrating how to create and configure a Web REST API connected to a Lambda function with Node.js and Claduia.js. To try it out, first [set up the credentials](https://github.com/claudiajs/claudia/blob/master/getting_started.md#configuring-access-credentials), then:
+A simple example demonstrating how to create and configure a Web REST API connected to a Lambda function with Node.js and Claudia.js. To try it out, first [set up the credentials](https://github.com/claudiajs/claudia/blob/master/getting_started.md#configuring-access-credentials), then:
 
 1. run `npm install` to grab the dependencies
 2. run `npm start` to set up the lambda project under the default name on AWS 
