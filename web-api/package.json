@@ -10,11 +10,11 @@
     "deploy": "claudia update"
   },
   "devDependencies": {
-    "claudia": "^0.2.0"
+    "claudia": "^1.x"
   },
   "dependencies": {
     "bluebird": "^3.3.0",
-    "claudia-api-builder": "^0.1.0",
+    "claudia-api-builder": "^1.x",
     "superb": "^1.2.0"
   }
 }
