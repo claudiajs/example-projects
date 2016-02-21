@@ -9,3 +9,5 @@ Note that AWS Lambda currently runs Node.js version 0.10.36, so it's best to use
   * [S3 File Processing](s3-file-processing) - an example service that converts files uploaded to S3; shows how to wire up Lambda to respond to S3 events
   * [Web API](web-api) - a simple REST api, shows how to configure and deploy an API Gateway interface along with the Lambda function
   * [Web Serving HTML](web-serving-html) - shows how to change error and success content types and response codes, and how to perform browser redirects
+
+For more information on the Web API configuration syntax, check out the [Claudia API Builder](https://github.com/claudiajs/claudia-api-builder/blob/master/README.md) project.
