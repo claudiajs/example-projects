@@ -1,0 +1,19 @@
+{
+  "name": "web-serving-html-test",
+  "description": "An example of how to customise HTTP response codes and content types",
+  "private": true,
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "start": "claudia create --name web-serving-html-test --region us-east-1 --api-module web",
+    "deploy": "claudia update"
+  },
+  "devDependencies": {
+    "claudia": "^1.x"
+  },
+  "dependencies": {
+    "claudia-api-builder": "^1.x",
+    "superb": "^1.2.0"
+  }
+}
