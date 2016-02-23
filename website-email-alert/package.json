@@ -1,0 +1,20 @@
+{
+  "name": "website-email-alert",
+  "description": "Send email if a web site is unreachable",
+  "private": true,
+  "files": [
+    "main.js"
+  ],
+  "scripts": {
+    "start": "claudia create --name website-email-alert --region us-east-1 --handler main.handler --policies policies",
+    "test": "claudia test-lambda --event test.json",
+    "deploy": "claudia update"
+  },
+  "devDependencies": {
+    "claudia": "^1.0.4"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.2.37",
+    "got": "^5.4.1"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "email": {
+    "from":"email@domain", 
+    "to": "email@domain"
+  }, 
+  "url": "https://some-url"
+}
