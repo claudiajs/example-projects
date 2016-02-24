@@ -22,9 +22,14 @@ SES service is specific to a region, so you might want to change the active regi
 2. run `npm start` to set up the lambda project under the default name on AWS 
 3. edit the [test.json](test.json) file and set up the e-mail accounts, as well as the URL you want to check
 4. run `npm test` to execute the function manually using the test event
-
-Try it out for some existing or non-existing URLs, to see the effect. Then set it up as a scheduled event on AWS so it runs automatically.
+5. Try it out for some existing or non-existing URLs, to see the effect. 
+6. Then set it up as a scheduled event on AWS so it runs automatically, by executing `npm run schedule`. This will run the event from `test.json` every five minutes.
 
 ## How it works
 
-Check out the [package.json](package.json) scripts section to see how Claudia gets invoked for the `start` and `test` scripts. Check out the [main.js](main.js) file to see how the Lambda function works.
+Check out the [package.json](package.json) scripts section to see how Claudia gets invoked for the `start`, `test` and `schedule` scripts. You can modify
+the execution frequenty in `package.json` easily and re-create a different event. See the [Schedule Expression Syntax](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/ScheduledEvents.html) for more information on the syntax.
+
+You can see all scheduled events in the [CloudWatch Rules Console](https://console.aws.amazon.com/cloudwatch/), and disable the event there if you don't want to receive any more e-mail notifications.
+
+Check out the [main.js](main.js) file to see how the Lambda function works.
