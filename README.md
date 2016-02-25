@@ -1,6 +1,6 @@
 #Claudia.js Example projects
 
-<img src="https://claudiajs.github.io/claudiajs.com/assets/claudiajs.svg" height="150" align="right" />
+<img src="https://claudiajs.github.io/claudiajs.com/assets/claudiajs.svg" height="300" align="right" />
 
   * [Hello World](hello-world) - shows a trivial Node.js Lambda function and how to set up deployment using Claudia.js
   * [Using NPM Modules](using-npm-modules) - a slightly more complex function, shows how to deploy third party dependencies using Claudia.js
