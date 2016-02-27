@@ -2,6 +2,7 @@
 var ApiBuilder = require('claudia-api-builder'),
 	api = new ApiBuilder(),
 	Promise = require('bluebird'),
+	fs = Promise.promisifyAll(require('fs')),
 	superb = require('superb');
 module.exports = api;
 
@@ -18,30 +19,26 @@ api.get('/echo', function (request) {
 	return request;
 });
 
-// use a promise for asynchronous processing
+// use request.queryString for query arguments
 api.get('/greet', function (request) {
 	'use strict';
-	return Promise.resolve(request.queryString.name + ' is ' + superb());
-});
-
-// Returning a promise, with some chained .then-functions
-// that will be called before responding
-api.get('/packagejson', function (request) {
-	'use strict';
-
-	var fs = Promise.promisifyAll(require("fs"));
-
-	return fs.readFileAsync("./package.json")
-    		.then(JSON.parse)
-    		.then(function (val) {
-    			return val;
-    		});
+	return request.queryString.name + ' is ' + superb();
 });
 
 // use {} for dynamic path parameters
 api.get('/people/{name}', function (request) {
 	'use strict';
-	return 'You wanted ' + request.pathParams.name;
+	return request.pathParams.name + ' is ' + superb();
+});
+
+// Return a promise for async processing
+api.get('/packagejson', function () {
+	'use strict';
+	return fs.readFileAsync('./package.json')
+		.then(JSON.parse)
+		.then(function (val) {
+			return val;
+		});
 });
 
 // use .post to handle a post; or .delete, .patch, .head, .put
