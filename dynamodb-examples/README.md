@@ -8,6 +8,15 @@ This example requires that you set up a dynamodb-table with the name `dynamodb-e
 **NOTE THIS TOO** 
 You will also have to give the `[your-lambda]-executor` role access to DynamoDb. Got to [IAM](https://console.aws.amazon.com/iam/) and set it up.
 
+## Get started
+
+To set this up, first [set up the credentials](https://github.com/claudiajs/claudia/blob/master/getting_started.md#configuring-access-credentials), then. 
+
+1. run `npm install` to grab the dependencies
+2. run `npm run create` to create the lambda project under the default name on AWS. 
+    1. For subsequent deploys use the `npm run deploy` script
+3. Test the API with using the [example requests below](#testing)
+
 ## The API
 
 * `POST` to `/user` - stores a new user data object
@@ -26,21 +35,21 @@ Post `application/json` that looks like this:
 ```
 
 ## Testing
-You can test the API by using `curl` (or using a fancier client like [Postman](https://www.getpostman.com/)). 
+You can test the API by using `curl` (or using a fancier client like [Postman](https://www.getpostman.com/)). Below are some examples with `curl`. 
 
-Below are some examples with `curl`. Replace `[your lambda url]` with the url to your lambda. Something like: `https://wv2202dss3s.execute-api.us-west-2.amazonaws.com/latest/user`
+Replace `[API ID]` with the ID of your API (see the generated `claudia.json` file, something like: `qxgwaa3n6b`), in the examples below.
 
 **Create new user**
 ```bash
-curl -H "Content-Type: application/json" -X POST -d "{'userId' : '123', 'name' : 'Marcus Hammarberg', 'age' : 43 }" https://[your lambda url]/latest/user
+curl -H "Content-Type: application/json" -X POST -d "{'userId' : '123', 'name' : 'Marcus Hammarberg', 'age' : 43 }" https://[API ID].execute-api.us-west-2.amazonaws.com/latest/user
 ```
 
 **Get user**
 ```bash
-curl -H "Content-Type: application/json" https://[your lambda url]/latest/user/123
+curl -H "Content-Type: application/json" https://[API ID].execute-api.us-west-2.amazonaws.com/latest/user/123
 ```
 
 **Delete user**
 ```bash
-curl -X DELETE https://[your lambda url]/latest/user/123
+curl -X DELETE https://[API ID].execute-api.us-west-2.amazonaws.com/latest/user/123
 ```
