@@ -1,0 +1,27 @@
+{
+  "name": "dynamodb-examples",
+  "version": "1.0.0",
+  "description": "An example on how to store and get data from dynamodb",
+  "main": "index.js",
+  "files" : ["*.js"],
+  "scripts": {
+    "create" : "claudia create --name dynamodb-examples-test --region us-west-2 --api-module index",
+    "deploy" : "claudia update"
+  },
+  "keywords": [
+    "claudia",
+    "aws-lambda",
+    "dynamodb"
+  ],
+  "author": "Marcus Hammarberg @marcusoftnet",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudiajs/example-projects.git"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.2.39",
+    "bluebird": "^3.3.3",
+    "claudia-api-builder": "^1.0.2",
+    "dynamodb-doc": "^1.0.0"
+  }
+}
