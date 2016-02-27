@@ -24,6 +24,20 @@ api.get('/greet', function (request) {
 	return Promise.resolve(request.queryString.name + ' is ' + superb());
 });
 
+// Returning a promise, with some chained .then-functions
+// that will be called before responding
+api.get('/packagejson', function (request) {
+	'use strict';
+
+	var fs = Promise.promisifyAll(require("fs"));
+
+	return fs.readFileAsync("./package.json")
+    		.then(JSON.parse)
+    		.then(function (val) {
+    			return val;
+    		});
+});
+
 // use {} for dynamic path parameters
 api.get('/people/{name}', function (request) {
 	'use strict';
