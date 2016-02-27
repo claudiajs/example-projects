@@ -32,15 +32,15 @@ Below are some examples with `curl`. Replace `[your lambda url]` with the url to
 
 **Create new user**
 ```bash
-curl -H "Content-Type: application/json" -X POST -d "{'userId' : '123', 'name' : 'Marcus Hammarberg', 'age' : 43 }" https://qxgwaa3n6a.execute-api.us-west-2.amazonaws.com/latest/user
+curl -H "Content-Type: application/json" -X POST -d "{'userId' : '123', 'name' : 'Marcus Hammarberg', 'age' : 43 }" https://[your lambda url]/latest/user
 ```
 
 **Get user**
 ```bash
-curl -H "Content-Type: application/json" https://qxgwaa3n6a.execute-api.us-west-2.amazonaws.com/latest/user/123
+curl -H "Content-Type: application/json" https://[your lambda url]/latest/user/123
 ```
 
 **Delete user**
 ```bash
-curl -X DELETE https://qxgwaa3n6a.execute-api.us-west-2.amazonaws.com/latest/user/123
+curl -X DELETE https://[your lambda url]/latest/user/123
 ```
