@@ -5,8 +5,6 @@ var ApiBuilder = require('claudia-api-builder'),
     AWS = require("aws-sdk"),
     DOC = require("dynamodb-doc");
 
-AWS.config.update({ region: "us-west-2" });
-
 // Create a promisified version of the docClient 
 var docClient = Promise.promisifyAll(new DOC.DynamoDB())
 
