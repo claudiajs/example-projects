@@ -17,14 +17,14 @@ api.post('/user', function(request) {
     
     // Create our model from the posted data
     // (psst should an application/x-form-www-urlencoded be used 
-    //	we could have read it below with request.post.userId)
+    //	we could have read it below with request.post.userId etc.)
     var postedData = {
         userId: request.body.userId,
         name: request.body.name,
         age: request.body.age
     };
 
-    // Set up parameters for dynamo
+    // Set up parameters for dynamodb
     var params = {
         TableName: getTableName(request),
         Item: {
@@ -36,10 +36,7 @@ api.post('/user', function(request) {
 
     // Store it and return the promise, 
     // that will evaluate before reponding back to the client
-    return docClient.putItemAsync(params)
-        .then(function(data) {
-            return "Created";
-        });
+    return docClient.putItemAsync(params);
 
 }, { success: 201 }); // Return HTTP status 201 - Created when successful
 
@@ -57,11 +54,8 @@ api.get('/user/{id}', function(request) {
     };
 
     // Get the item using our promisified function
-    // simply returning the data in the .then-clause
-    return docClient.getItemAsync(params)
-        .then(function(data) {
-            return data;
-        });
+    return docClient.getItemAsync(params);
+
 }); //200 ok is standard for non-errors
 
 // delete user with {id}
