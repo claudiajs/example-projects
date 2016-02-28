@@ -6,12 +6,9 @@ var ApiBuilder = require('claudia-api-builder'),
     DOC = require("dynamodb-doc");
 
 AWS.config.update({ region: "us-west-2" });
-var docClient = new DOC.DynamoDB();
 
-// Create promisified versions of the docClient functions we will use
-var putItem = Promise.promisify(docClient.putItem, { context: docClient });
-var getItem = Promise.promisify(docClient.getItem, { context: docClient });
-var deleteItem = Promise.promisify(docClient.deleteItem, { context: docClient });
+// Create a promisified version of the docClient 
+var docClient = Promise.promisifyAll(new DOC.DynamoDB())
 
 const TABLE_NAME = "dynamodb-examples-users";
 
@@ -42,7 +39,7 @@ api.post('/user', function(request) {
 
     // Store it and return the promise, 
     // that will evaluate before reponding back to the client
-    return putItem(params)
+    return docClient.putItemAsync(params)
         .then(function(data) {
             return "Created";
         });
@@ -64,7 +61,7 @@ api.get('/user/{id}', function(request) {
 
     // Get the item using our promisified function
     // simply returning the data in the .then-clause
-    return getItem(params)
+    return docClient.getItemAsync(params)
         .then(function(data) {
             return data;
         });
@@ -87,7 +84,7 @@ api.delete('/user/{id}', function(request) {
 
 	// Get the item using our promisified function
     // return a nice little message in the .then-clause
-    return deleteItem(params)
+    return docClient.deleteItemAsync(params)
         .then(function(data) {
             return "Deleted user with id '" + id + "'";
         });
