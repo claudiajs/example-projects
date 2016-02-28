@@ -5,7 +5,7 @@
   "main": "index.js",
   "files" : ["*.js"],
   "scripts": {
-    "create" : "claudia create --name dynamodb-examples-test --region us-west-2 --api-module index",
+    "create" : "claudia create --name dynamodb-examples-test4 --region us-west-2 --api-module index --policies policies",
     "deploy" : "claudia update"
   },
   "keywords": [
