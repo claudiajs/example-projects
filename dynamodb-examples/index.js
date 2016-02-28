@@ -8,8 +8,7 @@ var ApiBuilder = require('claudia-api-builder'),
 // Create a promisified version of the docClient 
 var docClient = Promise.promisifyAll(new DOC.DynamoDB())
 
-const TABLE_NAME = "dynamodb-examples-users";
-
+// Export the api 
 module.exports = api;
 
 // Create new user
@@ -27,7 +26,7 @@ api.post('/user', function(request) {
 
     // Set up parameters for dynamo
     var params = {
-        TableName: TABLE_NAME,
+        TableName: getTableName(request),
         Item: {
             userid: postedData.userId,
             name: postedData.name,
@@ -51,7 +50,7 @@ api.get('/user/{id}', function(request) {
 
     // Set up parameters for dynamo
     var params = {
-        TableName: TABLE_NAME,
+        TableName: getTableName(request),
         Key: {
             userid: id
         }
@@ -74,7 +73,7 @@ api.delete('/user/{id}', function(request) {
 
     // Set up parameters for dynamo
     var params = {
-        TableName: TABLE_NAME,
+        TableName: getTableName(request),
         Key: {
             userid: id
         }
@@ -87,3 +86,13 @@ api.delete('/user/{id}', function(request) {
             return "Deleted user with id '" + id + "'";
         });
 }); //200 ok is standard for non-errors
+
+function getTableName(request) {
+    // The table name is stored in the Lambda stage variables
+    // Go to https://console.aws.amazon.com/apigateway/home/apis/[YOUR API ID]/stages/latest
+    // and click Stages -> latest -> Stage variables
+
+    // These values will be found under request.env
+    // Here's I'll use a default if not set
+    return request.env.tableName || "dynamodb-examples-users";
+}

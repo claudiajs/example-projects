@@ -3,7 +3,11 @@
 This simple example shows how to store, retrieve and delete some data (users) to and from DynamoDb, the AWS document database. 
 
 **NOTE** 
-This example requires that you set up a dynamodb-table with the name `dynamodb-examples-users`, with a `string` primary key called `userid`. Create the table using the [DynamoDb console](https://us-west-2.console.aws.amazon.com/dynamodb/)
+This example requires that you set up a dynamodb-table, with a `string` primary key called `userid`. Create the table using the [DynamoDb console](https://us-west-2.console.aws.amazon.com/dynamodb/)
+
+The table name is stored in the Lambda stage variables. Go to https://console.aws.amazon.com/apigateway/home/apis/[YOUR API ID]/stages/latest and click Stages -> latest -> Stage variables
+
+In the code the stage variables will be found in: `request.env`. I have a helper (`getTableName`) that sets a default value, if this is not found
 
 **NOTE THIS TOO** 
 You will also have to give the `[your-lambda]-executor` role access to DynamoDb. Got to [IAM](https://console.aws.amazon.com/iam/) and set it up.
