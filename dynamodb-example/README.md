@@ -77,7 +77,7 @@ curl -X DELETE https://[API ID].execute-api.[REGION].amazonaws.com/latest/user/1
 ## How it works
 
 
-The table name, stored in the Lambda stage variables, is passed with each request in the `request.env` key-value map. Check out [main.js](main.js) to see how it is used, in the `getTableName` helper function.
+The table name, stored in the Lambda stage variables, is passed with each request in the `request.env` key-value map. Check out [index.js](index.js) to see how it is used, in the `getTableName` helper function.
 
 Claudia automatically creates a stage called `latest` if no specific version is provided. You can create additional stages and automatically grant execution privileges by using `claudia set-version`. For example, the following command will create a `development` stage:
 
