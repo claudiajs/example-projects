@@ -15,22 +15,15 @@ module.exports = api;
 api.post('/user', function(request) {
 	'use strict';
     
-    // Create our model from the posted data
+    // Map to the item to store from the posted data
     // (psst should an application/x-form-www-urlencoded be used 
     //	we could have read it below with request.post.userId etc.)
-    var postedData = {
-        userId: request.body.userId,
-        name: request.body.name,
-        age: request.body.age
-    };
-
-    // Set up parameters for dynamodb
     var params = {
         TableName: getTableName(request),
         Item: {
-            userid: postedData.userId,
-            name: postedData.name,
-            age: postedData.age
+            userid: request.body.userId,
+            name: request.body.name,
+            age: request.body.age
         }
     };
 
@@ -42,6 +35,8 @@ api.post('/user', function(request) {
 
 // get user for {id}
 api.get('/user/{id}', function(request) {
+    'use strict';
+    
     // Get the id from the pathParams
     var id = request.pathParams.id;
 
