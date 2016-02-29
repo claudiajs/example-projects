@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "An example on how to store and get data from dynamodb",
   "main": "index.js",
-  "files" : ["*.js"],
+  "files": [
+    "*.js"
+  ],
   "scripts": {
-    "create" : "claudia create --name dynamodb-examples-test --region us-west-2 --api-module index --policies policies",
-    "deploy" : "claudia update"
+    "create": "claudia create --name dynamodb-examples-test --region us-east-1 --api-module index --policies policies",
+    "deploy": "claudia update"
   },
   "keywords": [
     "claudia",
@@ -23,5 +25,8 @@
     "bluebird": "^3.3.3",
     "claudia-api-builder": "^1.0.2",
     "dynamodb-doc": "^1.0.0"
+  },
+  "devDependencies": {
+    "claudia": "^1.0.9"
   }
 }
