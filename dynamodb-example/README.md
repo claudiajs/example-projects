@@ -19,10 +19,12 @@ To set this up, first [set up the credentials](https://github.com/claudiajs/clau
 1. run `npm install` to grab the dependencies
 2. run `npm run create` to create the lambda project under the default name on AWS. 
 3. configure the API gateway to access your DynamoDB table, by setting up the `tableName` stage variable to point to your table in the `latest` API gateway stage. You can do that from the command line (replace `API_ID` with the ID of your API, from `claudia.json`, and `TABLE_ARN` with the name of the table (if you used the example command to create the table, this will be `dynamo-test`):
+
   ```bash 
   aws apigateway create-deployment --rest-api-id API_ID --stage-name latest --variables tableName=TABLE_ARN
   ```
-3. Test the API with using the [example requests below](#testing)
+
+4. Test the API with using the [example requests below](#testing)
 
 For subsequent updates, use the `npm run deploy` command.
 
