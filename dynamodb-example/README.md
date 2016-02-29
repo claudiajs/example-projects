@@ -7,7 +7,11 @@ This simple example shows how to store, retrieve and delete some data (users) to
 Create a table in DynamoDB, with a `string` primary key called `userid`. You can do that from the DynamoDB web console, or using the AWS CLI command line. Here is an example command that will create the table with the minimal provisioned throughput:
 
 ```bash
-aws dynamodb create-table --table-name dynamo-test --attribute-definitions AttributeName=userid,AttributeType=S --key-schema AttributeName=userid,KeyType=HASH --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 --query TableDescription.TableArn --output text
+aws dynamodb create-table --table-name dynamo-test \
+  --attribute-definitions AttributeName=userid,AttributeType=S \
+  --key-schema AttributeName=userid,KeyType=HASH \
+  --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 \
+  --query TableDescription.TableArn --output text
 ```
 
 This example project includes an IAM access policy that will grant the lambda function access to all your DynamoDB tables, to make it easier to get started. If you wish, you can edit the [policies/access-dynamodb.json](policies/access-dynamodb.json) file and restrict the access to your new table only.
