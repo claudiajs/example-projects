@@ -8,11 +8,11 @@
   "scripts": {
     "start": "claudia create --name website-email-alert --region us-east-1 --handler main.handler --policies policies",
     "test": "claudia test-lambda --event test.json",
-    "schedule": "claudia add-scheduled-event --event test.json --name website-alerts --schedule 'rate(5 minutes)'",
+    "schedule": "claudia add-scheduled-event --event test.json --name website-alerts --rate '5 minutes'",
     "deploy": "claudia update"
   },
   "devDependencies": {
-    "claudia": "^1.0.6"
+    "claudia": "^1.0.11"
   },
   "dependencies": {
     "aws-sdk": "^2.2.37",
