@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="512" height="200" viewBox="0, 0, 512, 200">
+  <g id="Layer_1">
+    <g>
+      <path d="M18.5,27.5 L164.5,27.5 L164.5,172.5 L18.5,172.5 L18.5,27.5 z" fill="#FFFFFF"/>
+      <path d="M18.5,27.5 L164.5,27.5 L164.5,172.5 L18.5,172.5 L18.5,27.5 z" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    </g>
+    <text transform="matrix(1, 0, 0, 1, 330.159, 44.5)">
+      <tspan x="-155.436" y="5.5" font-family="HelveticaNeue-Bold" font-size="24" fill="#000000">(name)</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 330.159, 117)">
+      <tspan x="-154.159" y="-38" font-family="HelveticaNeue" font-size="18" fill="#000000">Forks: (forks)</tspan>
+      <tspan x="-154.159" y="-16" font-family="HelveticaNeue" font-size="18" fill="#000000">Stars: (watchers)</tspan>
+      <tspan x="-154.159" y="6" font-family="HelveticaNeue" font-size="18" fill="#000000">Subscribers: (subscribers)</tspan>
+      <tspan x="-154.159" y="28" font-family="HelveticaNeue" font-size="18" fill="#000000">Created: (created)</tspan>
+      <tspan x="-154.159" y="50" font-family="HelveticaNeue" font-size="18" fill="#000000">Updated: (updated)</tspan>
+    </text>
+  </g>
+</svg>
