@@ -6,9 +6,16 @@ var ApiBuilder = require('claudia-api-builder'),
 	TimeAgo = require('time-ago'),
 	fs = Promise.promisifyAll(require('fs')),
 	api = module.exports  = new ApiBuilder(),
-	getRepoDetails = function (repo) {
+	getRepoDetails = function (repo, env) {
 		'use strict';
-		return got('https://api.github.com/repos/' + repo.owner + '/' + repo.name)
+		var appAuthorisation = '', url;
+		/* increase rate limits by authenticating a gihtub app */
+		if (env.githubClientId && env.githubClientSecret) {
+			appAuthorisation = '?client_id=' + env.githubClientId + '&client_secret=' + env.githubClientSecret;
+		}
+		url = 'https://api.github.com/repos/' + repo.owner + '/' + repo.name + appAuthorisation;
+		//console.log('looking for ', url);
+		return got(url)
 			.then(function (response) {
 				return JSON.parse(response.body);
 			});
@@ -22,7 +29,7 @@ api.get('/svg/{owner}/{name}', function (request) {
 	return fs.readFileAsync('template.svg', 'utf8').then(function (contents) {
 		template = contents;
 	}).then(function () {
-		return getRepoDetails(githubRepo);
+		return getRepoDetails(githubRepo, request.env);
 	}).then(function (repoDetails) {
 		var dateFormatter = new TimeAgo(),
 			fmt = function (number) {
