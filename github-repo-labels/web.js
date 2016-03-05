@@ -35,8 +35,7 @@ api.get('/svg/{owner}/{name}', function (request) {
 			replacements = {
 				name: repoDetails.full_name,
 				forks: fmt(repoDetails.forks_count),
-				watchers: fmt(repoDetails.stargazers_count),
-				subscribers: fmt(repoDetails.subscribers_count),
+				stars: fmt(repoDetails.stargazers_count),
 				created: dateFormatter.ago(repoDetails.created_at),
 				updated: dateFormatter.ago(repoDetails.updated_at)
 			};
