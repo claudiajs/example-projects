@@ -26,10 +26,10 @@ api.get('/svg/{owner}/{name}', function (request) {
 	}).then(function (repoDetails) {
 		var dateFormatter = new TimeAgo(),
 			fmt = function (number) {
-				if (number < 1000) {
-					return number;
-				} else {
+				if (number > 999 && number < 100000) {
 					return numeral(number).format('0.0a');
+				} else {
+					return numeral(number).format('0a');
 				}
 			},
 			replacements = {
