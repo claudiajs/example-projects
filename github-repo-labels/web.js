@@ -32,8 +32,9 @@ api.get('/svg/{owner}/{name}', function (request) {
 					return numeral(number).format('0a');
 				}
 			},
+			displayName = (repoDetails.full_name.length <= 20) ? repoDetails.full_name : repoDetails.name,
 			replacements = {
-				name: repoDetails.full_name,
+				name: displayName,
 				forks: fmt(repoDetails.forks_count),
 				stars: fmt(repoDetails.stargazers_count),
 				created: dateFormatter.ago(repoDetails.created_at),
