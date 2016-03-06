@@ -10,7 +10,7 @@
   },
   "files": [
     "*.js",
-    "template.svg"
+    "svg"
   ],
   "author": "Gojko Adzic <gojko@gojko.com>",
   "license": "MIT",

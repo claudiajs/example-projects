@@ -20,13 +20,13 @@ var ApiBuilder = require('claudia-api-builder'),
 				return JSON.parse(response.body);
 			});
 	};
-api.get('/svg/{owner}/{name}', function (request) {
+api.get('/{owner}/{name}/{template}', function (request) {
 	'use strict';
 	var githubRepo = {
 		owner: request.pathParams.owner,
 		name: request.pathParams.name
 	}, template;
-	return fs.readFileAsync('template.svg', 'utf8').then(function (contents) {
+	return fs.readFileAsync('svg/' + request.pathParams.template, 'utf8').then(function (contents) {
 		template = contents;
 	}).then(function () {
 		return getRepoDetails(githubRepo, request.env);
