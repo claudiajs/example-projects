@@ -45,7 +45,7 @@ api.get('/{owner}/{name}/{template}', function (request) {
 				forks: fmt(repoDetails.forks_count),
 				stars: fmt(repoDetails.stargazers_count),
 				created: dateFormatter.ago(repoDetails.created_at),
-				updated: dateFormatter.ago(repoDetails.updated_at)
+				updated: dateFormatter.ago(repoDetails.pushed_at)
 			};
 		Object.keys(replacements).forEach(function (key) {
 			template = template.replace('(' + key + ')', replacements[key]);
