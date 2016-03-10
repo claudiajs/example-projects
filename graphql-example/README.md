@@ -1,6 +1,11 @@
 # GraphQL server with DynamoDB storage
 
-This simple example shows how to store, retrieve and delete some data (users) to and from DynamoDB, the AWS document database. It also shows how to use API Gateway stage variables to store configuration information for different Lambda versions (eg development, testing or production resources).
+Inspired by Kevin Old's [project](http://kevinold.com/2016/02/01/serverless-graphql.html),
+this is a sample implementation
+a [GraphQL](http://graphql.org/) service on AWS Lambda using Claudia. The service offers CRUD operations via just 1 endpoint. The data persistence is done via
+DynamoDB, similar to the [dynamodb-example](https://github.com/claudiajs/example-projects/tree/master/dynamodb-example).
+Additionally, this sample project use ES2015 and the JS files are transpiled by
+[Babel](https://babeljs.io/) before uploading to AWS.
 
 ## Prerequisites
 
@@ -22,67 +27,66 @@ To set this up, first [set up the credentials](https://github.com/claudiajs/clau
 
 1. run `npm install` to grab the dependencies
 2. run `npm run create` to create the lambda project under the default name on AWS.
-3. configure the API gateway to access your DynamoDB table, by setting up the `tableName` stage variable to point to your table in the `latest` API gateway stage. You can do that from the command line (replace `API_ID` with the ID of your API, from `claudia.json`, and `TABLE_NAME` with the name of the table (if you used the example command to create the table, this will be `claudia-graphql-example`):
-
-  ```bash
-  aws apigateway create-deployment --rest-api-id API_ID \
-    --stage-name latest --variables tableName=TABLE_NAME
-  ```
-
-4. Test the API with using the [example requests below](#testing)
+3. run `./test/run.sh` to execute cURL scripts to test the CRUD operations against the lambda endpoint.
 
 For subsequent updates, use the `npm run deploy` command.
 
 ## The API
 
-* `POST` to `/user` - stores a new user data object
-* `GET` to `/user/{id}` - returns user with id `{id}`
-* `DELETE` to `/user/{id}` - deletes the user with id `{id}`
+With GraphQL, there is only 1 endpoint `/latest/graphql` for all CRUD operations.
 
-### Model
+
+### Create and Update
 Post `application/json` that looks like this:
 
 ```json
 {
-    "userId" : "123",
-    "name" : "Marcus Hammarberg",
-    "age" : 43
+    query: "mutation {
+              addUser (userid:\"2\", name:\"John Doe\", age:29) {
+                userid
+                name
+                age
+              }
+            }"
+}
+```
+
+### Read
+Post `application/json` that looks like this:
+
+```json
+{
+    query: "{
+              user (userid:\"4\") {
+                 userid
+                 name
+                 age
+              }
+            }"
+}
+```
+
+### DELETE
+Post `application/json` that looks like this:
+
+```json
+{
+    query: "mutation {
+              deleteUser (userid:\"4\") {
+                userid
+                name
+                age
+              }
+            }"
 }
 ```
 
 ## Testing
 
-You can test the API by using `curl` (or using a fancier client like [Postman](https://www.getpostman.com/)). Below are some examples with `curl`.
+### Via cURL
+Run `./test/run.sh` to launch the cURL scripts that perform the various operations.
 
-Replace `[API ID]` with the ID of your API (see the generated `claudia.json` file, something like: `qxgwaa3n6b`), and `[REGION]` with your AWS Region (eg `us-west-2`) in the examples below.
+### Via GraphiQL
+GraphiQL is an IDE that help user edit and test queries and discover the schema. You can download a GraphiQL app at https://github.com/skevy/graphiql-app
 
-### Create new user
-
-```bash
-curl -H "Content-Type: application/json" -X POST -d "{'userId' : '123', 'name' : 'Marcus Hammarberg', 'age' : 43 }" https://[API ID].execute-api.[REGION].amazonaws.com/latest/user
-```
-
-### Get user
-
-```bash
-curl -H "Content-Type: application/json" https://[API ID].execute-api.[REGION].amazonaws.com/latest/user/123
-```
-
-### Delete user
-
-```bash
-curl -X DELETE https://[API ID].execute-api.[REGION].amazonaws.com/latest/user/123
-```
-
-## How it works
-
-
-The table name, stored in the Lambda stage variables, is passed with each request in the `request.env` key-value map. Check out [index.js](index.js) to see how it is used, in the `getTableName` helper function.
-
-Claudia automatically creates a stage called `latest` if no specific version is provided. You can create additional stages and automatically grant execution privileges by using `claudia set-version`. For example, the following command will create a `development` stage:
-
-```bash
-claudia set-version --version development
-```
-
-You can then add the `tableName` stage variable for `development` to point to a specific table. To invoke that API version, replace the word `latest` with `development` in the URL examples above.
+![GraphiQL App](./Graphiql_app.png "GraphiQL App")
