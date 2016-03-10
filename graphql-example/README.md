@@ -41,7 +41,7 @@ Post `application/json` that looks like this:
 
 ```json
 {
-    query: "mutation {
+  "query": "mutation {
               addUser (userid:\"2\", name:\"John Doe\", age:29) {
                 userid
                 name
@@ -56,7 +56,7 @@ Post `application/json` that looks like this:
 
 ```json
 {
-    query: "{
+  "query": "{
               user (userid:\"4\") {
                  userid
                  name
@@ -71,7 +71,7 @@ Post `application/json` that looks like this:
 
 ```json
 {
-    query: "mutation {
+  "query": "mutation {
               deleteUser (userid:\"4\") {
                 userid
                 name
@@ -89,4 +89,4 @@ Run `./test/run.sh` to launch the cURL scripts that perform the various operatio
 ### Via GraphiQL
 GraphiQL is an IDE that help user edit and test queries and discover the schema. You can download a GraphiQL app at https://github.com/skevy/graphiql-app
 
-![GraphiQL App](./Graphiql_app.png "GraphiQL App")
+![GraphiQL App](./GraphiQL_app.png "GraphiQL App")
