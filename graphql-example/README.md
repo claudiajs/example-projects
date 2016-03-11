@@ -1,4 +1,4 @@
-# GraphQL server with DynamoDB storage
+# GraphQL Endpoint, ES2015 and DynamoDB
 
 Inspired by Kevin Old's [project](http://kevinold.com/2016/02/01/serverless-graphql.html),
 this is a sample implementation
