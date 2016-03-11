@@ -1,7 +1,7 @@
 {
   "name": "graphql-example",
   "version": "1.0.0",
-  "description": "An example on using GraphQL to store and get data to/from DynamoDB",
+  "description": "An example on using a GraphQL endpoint to store and get data to/from DynamoDB",
   "main": "index.js",
   "files": [
     "./*.js"
