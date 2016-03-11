@@ -93,4 +93,6 @@ GraphiQL is an IDE that help user edit and test queries and discover the schema.
 
 ## Transpile ES2015 to ES5
 
-The implementation in this example is written in ES2015 under the `src` folder. It is transpiled to ES5 during `npm create` and `npm deploy` via Babel. 
+The implementation in this example is written in ES2015 under the `src` folder. It is transpiled to ES5 during `npm create` and `npm deploy` via Babel. See the `npm run tranpile` target at package.json.
+
+> babel --presets es2015 --plugins add-module-exports src --out-dir .
