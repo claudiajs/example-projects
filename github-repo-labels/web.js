@@ -10,8 +10,8 @@ var ApiBuilder = require('claudia-api-builder'),
 		'use strict';
 		var appAuthorisation = '', url;
 		/* increase rate limits by authenticating a gihtub app */
-		if (env.githubClientId && env.githubClientSecret) {
-			appAuthorisation = '?client_id=' + env.githubClientId + '&client_secret=' + env.githubClientSecret;
+		if (env.githubClientId && env.githubSecret) {
+			appAuthorisation = '?client_id=' + env.githubClientId + '&client_secret=' + env.githubSecret;
 		}
 		url = 'https://api.github.com/repos/' + repo.owner + '/' + repo.name + appAuthorisation;
 		//console.log('looking for ', url);
