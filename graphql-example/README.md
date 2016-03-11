@@ -4,7 +4,7 @@ Inspired by Kevin Old's [project](http://kevinold.com/2016/02/01/serverless-grap
 this is a sample implementation
 a [GraphQL](http://graphql.org/) service on AWS Lambda using Claudia. The service offers CRUD operations via just 1 endpoint. The data persistence is done via
 DynamoDB, similar to the [dynamodb-example](https://github.com/claudiajs/example-projects/tree/master/dynamodb-example).
-Additionally, this sample project use ES2015 and the JS files are transpiled by
+Additionally, this sample project is written in ES2015 and is transpiled by
 [Babel](https://babeljs.io/) before uploading to AWS.
 
 ## Prerequisites
@@ -33,7 +33,7 @@ For subsequent updates, use the `npm run deploy` command.
 
 ## The API
 
-With GraphQL, there is only 1 endpoint `/latest/graphql` for all CRUD operations.
+With GraphQL, there is only 1 endpoint `/latest/graphql` for all CRUD operations. User construct a GraphQL query string based on the schema definition defined in `src/schema.js`, and post the string to the endpoint.
 
 
 ### Create and Update
@@ -90,3 +90,7 @@ Run `./test/run.sh` to launch the cURL scripts that perform the various operatio
 GraphiQL is an IDE that help user edit and test queries and discover the schema. You can download a GraphiQL app at https://github.com/skevy/graphiql-app
 
 ![GraphiQL App](./GraphiQL_app.png "GraphiQL App")
+
+## Transpile ES2015 to ES5
+
+The implementation in this example is written in ES2015 under the `src` folder. It is transpiled to ES5 during `npm create` and `npm deploy` via Babel. 
