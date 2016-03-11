@@ -15,7 +15,7 @@
   "author": "Gojko Adzic <gojko@gojko.com>",
   "license": "MIT",
   "devDependencies": {
-    "claudia": "^1.0.12"
+    "claudia": "^1.0.15"
   },
   "dependencies": {
     "bluebird": "^3.3.3",
