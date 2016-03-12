@@ -13,6 +13,7 @@
   * [Web API](web-api) -- a simple REST api, shows how to configure and deploy an API Gateway interface along with the Lambda function
   * [Web Serving HTML](web-serving-html) -- shows how to change error and success content types and response codes, and how to perform browser redirects
   * [DynamoDB CRUD](dynamodb-example) -- a simple document store, shows how to use DynamoDB and connect it to a CRUD REST API. Also shows how to configure a single Lambda function to work with different resources for development, testing and production.
+  * [GraphQL Endpoint](graphql-example) -- GraphQL CRUD operations, using ES2015 transpiled by Babel, using DynamoDB for persistence.
 
 For more information on the Web API configuration syntax, check out the [Claudia API Builder](https://github.com/claudiajs/claudia-api-builder/blob/master/README.md) project. For more information on Claudia.js options, see the [Command Line Usage](https://github.com/claudiajs/claudia/blob/master/bin/usage.txt).
 
