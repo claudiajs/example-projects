@@ -52,4 +52,4 @@ api.get('/{owner}/{name}/{template}', function (request) {
 		});
 		return template;
 	});
-}, {apiKeyRequired: true, success: {contentType: 'image/svg+xml'}});
+}, {/*apiKeyRequired: true,*/ success: {contentType: 'image/svg+xml'}});
