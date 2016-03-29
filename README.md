@@ -12,6 +12,8 @@
 
   * [Web API](web-api) &ndash; a simple REST api, shows how to configure and deploy an API Gateway interface along with the Lambda function
   * [Web Serving HTML](web-serving-html) &ndash; shows how to change error and success content types and response codes, and how to perform browser redirects
+  * [Custom Headers](web-api-custom-headers) &ndash; shows how to return custom headers from API responses
+  * [Custom CORS origins](web-api-custom-cors) &ndash; shows how to control allowed CORS origins/headers
   * [DynamoDB CRUD](dynamodb-example) &ndash; a simple document store, shows how to use DynamoDB and connect it to a CRUD REST API. Also shows how to configure a single Lambda function to work with different resources for development, testing and production.
   * [GraphQL Endpoint](graphql-example) &ndash; GraphQL CRUD operations, using ES2015 transpiled by Babel, using DynamoDB for persistence.
   * [GitHub Repository Labels](github-repo-labels) &ndash; a simple image server, shows how to map URL path components to arguments, how to customise response types and how to connect to third party REST APIs

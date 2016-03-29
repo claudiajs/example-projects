@@ -1,0 +1,18 @@
+{
+  "name": "web-api-custom-cors",
+  "description": "An example for returning custom CORS origins/headers",
+  "private": true,
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "start": "claudia create --name web-api-custom-cors --region us-east-1 --api-module web",
+    "deploy": "claudia update"
+  },
+  "devDependencies": {
+    "claudia": "github:claudiajs/claudia"
+  },
+  "dependencies": {
+    "claudia-api-builder": "github:claudiajs/claudia-api-builder"
+  }
+}
