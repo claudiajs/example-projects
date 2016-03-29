@@ -10,10 +10,10 @@
     "deploy": "claudia update"
   },
   "devDependencies": {
-    "claudia": "github:claudiajs/claudia"
+    "claudia": "^1.1.0"
   },
   "dependencies": {
     "bluebird": "^3.3.4",
-    "claudia-api-builder": "github:claudiajs/claudia-api-builder"
+    "claudia-api-builder": "^1.1.0"
   }
 }
