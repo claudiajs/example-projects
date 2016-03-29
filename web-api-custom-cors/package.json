@@ -10,9 +10,9 @@
     "deploy": "claudia update"
   },
   "devDependencies": {
-    "claudia": "github:claudiajs/claudia"
+    "claudia": "^1.1.0"
   },
   "dependencies": {
-    "claudia-api-builder": "github:claudiajs/claudia-api-builder"
+    "claudia-api-builder": "^1.1.0"
   }
 }
