@@ -7,6 +7,7 @@
   * [Using NPM Modules](using-npm-modules) &ndash; a slightly more complex function, shows how to deploy third party dependencies using Claudia.js
   * [S3 File Processing](s3-file-processing) &ndash; an example service that converts files uploaded to S3; shows how to wire up Lambda to respond to S3 events
   * [Website Email Alert](website-email-alert) &ndash; periodically check a URL and send an e-mail if it is not available; shows how to send e-mails using SES and set up Lambda functions as scheduled recurring events
+  * [Detecting Context](detecting-context) &ndash; detect if a function was called for development or production, in order to load the right configuration 
 
 ## Examples including a Web API
 

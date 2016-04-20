@@ -1,0 +1,15 @@
+{
+  "name": "detecting-context",
+  "version": "1.0.0",
+  "description": "example showing how to detect if lambda is running as production or development",
+  "scripts": {
+    "setup": "claudia create --version dev --region us-east-1 --handler api.handler && claudia set-version --version production",
+    "deploy": "claudia update --version dev && claudia set-version --version production",
+    "deploy-dev": "claudia update --version dev",
+    "call-dev": "claudia test-lambda --version dev",
+    "call-production": "claudia test-lambda --version production"
+  },
+  "devDependencies": {
+    "claudia": "^1.2.3"
+  }
+}
