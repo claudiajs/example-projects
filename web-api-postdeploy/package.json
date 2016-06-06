@@ -1,0 +1,15 @@
+{
+  "name": "web-api-postinstall1",
+  "description": "An example of how to add post install hooks to web APIs",
+  "private": true,
+  "scripts": {
+    "start": "claudia create --region us-east-1 --api-module web --custom-message 'from-create'",
+    "deploy": "claudia update --custom-message 'from-update'"
+  },
+  "devDependencies": {
+    "claudia": "^1.4.1"
+  },
+  "dependencies": {
+    "claudia-api-builder": "^1.2.1"
+  }
+}
