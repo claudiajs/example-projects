@@ -1,16 +1,8 @@
 'use strict';
 
-const botBuilder = require('./lib/bot-builder.js');
+const botBuilder = require('claudia-bot-builder');
 const excuse = require('huh');
 
 module.exports = botBuilder(request =>
-  /*
-    {
-      sender: '',
-      text: '',
-      originalRequest: {},
-      type: '' // facebook, slackSlashCommand, slackBot, telegram
-    }
-  */
-  Promise.resolve(`Why ${request.text} > ${excuse.get()}`)
+  `Thank you for sending ${request.text}. Your message is very important to us. The problem was caused by ${excuse.get()}`
 );
