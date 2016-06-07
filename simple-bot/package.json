@@ -1,0 +1,27 @@
+{
+  "name": "simple-bot",
+  "private": "true",
+  "version": "1.0.0",
+  "description": "Simple bot example for claudia bot builder",
+  "scripts": {
+    "create": "claudia create --region us-east-1 --api-module api",
+    "configure-facebook": "claudia update --configure-fb-bot",
+    "configure-skype": "claudia update --configure-fb-bot",
+    "configure-telegram": "claudia update --configure-telegram-bot",
+    "configure-slack": "claudia update --configure-slack-slash-command",
+    "start": "ntl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stojanovic/bot-builder.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "claudia-bot-builder": "^1.0.0",
+    "huh": "^1.1.4"
+  },
+  "devDependencies": {
+    "claudia": "^1.4.1",
+    "ntl": "^1.1.2"
+  }
+}
