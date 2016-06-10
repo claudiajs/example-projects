@@ -1,0 +1,20 @@
+{
+  "name": "bot-with-buttons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "create": "claudia create --api-module bot --region us-east-1",
+    "configure-fb": "claudia update --configure-fb-bot",
+    "deploy": "claudia update"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "claudia-bot-builder": "file:///Users/gojko/work/bot-builder",
+    "wikidata-search": "^1.0.3"
+  },
+  "devDependencies": {
+    "claudia": "^1.4.1"
+  }
+}
