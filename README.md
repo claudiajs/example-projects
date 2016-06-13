@@ -2,7 +2,7 @@
 
 <img src="https://claudiajs.github.io/claudiajs.com/assets/claudiajs.svg" height="300" align="right" />
 
-## Background processing (no web API) examples
+## Background processing 
 
 * [Hello World](hello-world) &ndash; shows a trivial Node.js Lambda function and how to set up deployment using Claudia.js
 * [Using NPM Modules](using-npm-modules) &ndash; a slightly more complex function, shows how to deploy third party dependencies using Claudia.js
@@ -10,7 +10,7 @@
 * [Website Email Alert](website-email-alert) &ndash; periodically check a URL and send an e-mail if it is not available; shows how to send e-mails using SES and set up Lambda functions as scheduled recurring events
 * [Detecting Context](detecting-context) &ndash; detect if a function was called for development or production, in order to load the right configuration 
 
-## Examples including a Web API
+## Web API
 
 * [Web API](web-api) &ndash; a simple REST api, shows how to configure and deploy an API Gateway interface along with the Lambda function
 * [Web Serving HTML](web-serving-html) &ndash; shows how to change error and success content types and response codes, and how to perform browser redirects
@@ -20,6 +20,11 @@
 * [DynamoDB CRUD](dynamodb-example) &ndash; a simple document store, shows how to use DynamoDB and connect it to a CRUD REST API. Also shows how to configure a single Lambda function to work with different resources for development, testing and production.
 * [GraphQL Endpoint](graphql-example) &ndash; GraphQL CRUD operations, using ES2015 transpiled by Babel, using DynamoDB for persistence.
 * [GitHub Repository Labels](github-repo-labels) &ndash; a simple image server, shows how to map URL path components to arguments, how to customise response types and how to connect to third party REST APIs
+
+## Chat-bots
+
+* [Simple Bot](simple-bot) &ndash; an example demonstrating how to receive and respond with simple text messages
+* [Facebook Messenger Bot with Buttons](bot-with-buttons) &ndash; an example showing how to create more complex platform specific messages, for example Facebook buttons
 
 ## Examples in other repositories
 
