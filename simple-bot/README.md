@@ -7,7 +7,8 @@ This chat-bot shows how to receive and respond with simple text messages, using 
 
 ## Try live
 
-<a href="https://slack.com/oauth/authorize?scope=incoming-webhook,commands&client_id=50296596898.50276082452"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
+* <a href="https://slack.com/oauth/authorize?scope=incoming-webhook,commands&client_id=50296596898.50276082452"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
+* [Chat on Skype](https://join.skype.com/bot/08f53028-dd61-4769-907d-29bdce505f16)
 
 ## Setting up your own copy
 
@@ -18,3 +19,10 @@ Use `npm run create` to set up the initial installation, then use:
 * `npm run configure-telegram` to set up the Telegram integration
 * `npm run configure-skype` to set up Skype integration
 
+## Privacy 
+
+This bot collects no private information
+
+## License and Terms of Service
+
+[MIT](LICENSE) 
