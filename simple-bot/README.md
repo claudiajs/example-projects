@@ -2,6 +2,9 @@
 
 This chat-bot shows how to receive and respond with simple text messages, using the same code for all four supported platforms. 
 
+![](https://claudiajs.github.io/claudiajs.com/assets/supportbot-facebook.gif)
+![](https://claudiajs.github.io/claudiajs.com/assets/supportbot-slack.gif)
+
 ## Try live
 
 <a href="https://slack.com/oauth/authorize?scope=incoming-webhook,commands&client_id=50296596898.50276082452"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
