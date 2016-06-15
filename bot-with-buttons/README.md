@@ -2,7 +2,9 @@
 
 A simple bot demonstrating how to create buttons and post-back actions on Facebook Messenger using Claudia.js.
 
-<img src="https://claudiajs.github.io/claudiajs.com/assets/factbot.gif" width="500" height="400" />
+[Try it live](https://m.me/factbot) using Facebook Messenger.
+
+[![](https://claudiajs.github.io/claudiajs.com/assets/factbot.gif)](https://m.me/factbot)
 
 ## Features
 
