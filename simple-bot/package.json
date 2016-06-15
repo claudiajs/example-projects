@@ -6,7 +6,7 @@
   "scripts": {
     "create": "claudia create --region us-east-1 --api-module api",
     "configure-facebook": "claudia update --configure-fb-bot",
-    "configure-skype": "claudia update --configure-fb-bot",
+    "configure-skype": "claudia update --configure-skype-bot",
     "configure-telegram": "claudia update --configure-telegram-bot",
     "configure-slack": "claudia update --configure-slack-slash-command",
     "start": "ntl"

@@ -17,8 +17,8 @@ Use `npm run create` to set up the initial installation, then use:
 
 * `npm run configure-slack` to set up Slack slash command configuration. Follow the instructions from [Slack API Docs](https://api.slack.com/) to set up an app with a slash command, then [Create a Slack Button](https://api.slack.com/docs/slack-button) so people can add your app to their channels 
 * `npm run configure-facebook` to set up the Facebook messenger integration. Follow the instructions from the [Facebook Messenger Getting Started](https://developers.facebook.com/docs/messenger-platform/quickstart) guide, then submit the app for [App Review](https://developers.facebook.com/docs/messenger-platform/app-review) so the others can interact with it
+* `npm run configure-skype` to set up Skype integration. Create an application and an application password at the [Microsoft App Portal](https://apps.dev.microsoft.com/Login?ru=https%3a%2f%2fapps.dev.microsoft.com%2f), and enter into Claudia when asked. Then create a bot at the [Skype Bot Developer Page](https://developer.microsoft.com/en-us/skype/bots/manage/Create), tick 'Send and receive messages and content in 1:1 chat', and enter the webhook URL printed by the Claudia installer
 * `npm run configure-telegram` to set up the Telegram integration
-* `npm run configure-skype` to set up Skype integration
 
 ## Privacy 
 
