@@ -11,6 +11,8 @@ This chat-bot shows how to receive and respond with simple text messages, using 
 
 * [Chat on Skype](https://join.skype.com/bot/08f53028-dd61-4769-907d-29bdce505f16)
 
+* [Chat on Telegram](https://telegram.me/claudia-test-bot)
+
 ## Setting up your own copy
 
 Use `npm run create` to set up the initial installation, then use:
