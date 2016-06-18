@@ -28,7 +28,9 @@
 
 ## Examples in other repositories
 
+* [Slack Ping Command](https://github.com/marcusoftnet/pingu), showing how to create a simple Slack command, pinging a Web URL and reporting the result
 * [State-Action-Model](https://github.com/jdubray/sam-samples/tree/master/crud-blog-lambda) example, showing how to use the [SAM pattern](http://sam.js.org/) to create a Lambda-powered blog
+
 
 ## More information
 
