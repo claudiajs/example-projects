@@ -1,0 +1,17 @@
+{
+  "name": "web-api-lambda-context",
+  "version": "1.0.0",
+  "description": "simple example showing how to access the lambda context when using claudia-api-builder",
+  "main": "web.js",
+  "scripts": {
+    "start": "claudia create --region us-east-1 --api-module web"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "claudia-api-builder": "^1.3.0"
+  },
+  "devDependencies": {
+    "claudia": "^1.4.1"
+  }
+}
