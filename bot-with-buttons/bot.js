@@ -1,6 +1,7 @@
 /*global module*/
 'use strict';
 const builder = require('claudia-bot-builder'),
+  fbTemplate = require('claudia-bot-builder').fbTemplate,
   ws = require('./src/ws'),
   eTitle = entity => ((entity.label || '') + ' ' + (entity.description || ''));
 module.exports = builder(request => {
@@ -12,23 +13,13 @@ module.exports = builder(request => {
       let title = 'Facts about ' + eTitle(entities[0]);
       return ws.entityClaims(entities[0].id).then(claims => title + ':\n' + claims.join('\n'));
     } else {
-      return {
-        attachment: {
-          type: 'template',
-          payload: {
-            template_type: 'generic',
-            elements: entities.slice(0, 9).map(entity => ({
-              title: entity.label,
-              subtitle: entity.description,
-              buttons: [{
-                type: 'postback',
-                title: 'View Facts',
-                payload: entity.id
-              }]
-            }))
-          }
-        }
-      };
+      const generic = new fbTemplate.generic();
+      entities.slice(0, 9).forEach(entity => ({
+        generic
+          .addBubble(entity.label.substring(0, 80), entity.description.substring(0, 80))
+            .addButton('View Facts', entity.id);
+      });
+      return generic.get();
     }
   });
 });
