@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "claudia-bot-builder": "^1.0.0",
+    "claudia-bot-builder": "^1.1.0",
     "wikidata-search": "^1.0.3"
   },
   "devDependencies": {
