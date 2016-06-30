@@ -56,7 +56,4 @@ module.exports = function EventLogger(request, applicationId) {
 		mobileanalytics.putEventsAsync = denodeify(mobileanalytics.putEvents);
 		return mobileanalytics.putEventsAsync(params);
 	};
-	this.addConfigurationHooks = function (api) {
-
-	};
 };
