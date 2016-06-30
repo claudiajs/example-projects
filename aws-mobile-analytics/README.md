@@ -18,9 +18,14 @@ After the initial deployment, Claudia will log the API URL. Open that in a brows
 
 The utility logging function is in [`eventlogger.js`](eventlogger.js). It connects to AMA and pre-populates most of the fields with the Lambda execution information. You can modify this to create session events, or payment events &ndash; check out the event structure reference below.
 
-The main module is [api.js](api.js), which just logs a simple event and demonstrates how to pass in additional event parameters and metrics. In this case, it logs the query string parameter name, and the length of the name as the metric. It uses a stage variable to store the application ID, and asks the users to configure it in a post-deploy step. 
+The main module is [api.js](api.js), which just logs a simple event and demonstrates how to pass in additional event parameters and metrics. In this case, it logs the query string parameter name, and the length of the name as the metric. It uses a stage variable to store the application ID, and asks the users to configure it in a post-deploy step. (That's why `start` and `configure` [package scripts](package.json) use `--configure-analytics`). 
 
-When using this example in your code, remember to copy the policy file from the [policies](policies) directory, and provide to Claudia when creating the function, so that your Lambda function gets authorised to log events. 
+When using this example in your code, remember to copy the policy file from the [policies](policies) directory, and provide to Claudia when creating the function, so that your Lambda function gets authorised to log events. (That's why the `start` [package script](package.json) has `--policies`).
+
+## Experimenting with the app
+
+* to upload a new version of the code to Lambda, use `npm run deploy`
+* to reconfigure the logging application ID, use `npm run configure`
 
 ## References
 
