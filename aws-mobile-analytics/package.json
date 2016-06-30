@@ -1,0 +1,21 @@
+{
+  "name": "aws-mobile-analytics",
+  "version": "1.0.0",
+  "description": "An example of how to use AWS mobile analytics with Claudia API Builder",
+  "main": "index.js",
+  "scripts": {
+    "start": "claudia create --region us-east-1 --api-module api --policies policies --version dev --configure-analytics",
+    "deploy": "claudia update --version dev",
+    "configure": "claudia update --version dev --configure-analytics"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.4.3",
+    "claudia-api-builder": "^1.3.0",
+    "denodeify": "^1.2.1"
+  },
+  "devDependencies": {
+    "claudia": "^1.4.2"
+  }
+}
