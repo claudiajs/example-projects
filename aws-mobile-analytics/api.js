@@ -1,89 +1,23 @@
-/*global module, require, process */
+/*global module, require */
 var ApiBuilder = require('claudia-api-builder'),
-	AWS = require('aws-sdk'),
-	mobileanalytics = new AWS.MobileAnalytics(),
-	api = new ApiBuilder(),
-	denodeify = require('denodeify'),
-	readline = require('readline'),
-	packageJSON = require('./package.json'),
-	ask = function (question, PromiseImpl) {
-		'use strict';
-		return new PromiseImpl(function (resolve, reject) {
-			var rl = readline.createInterface({
-				input: process.stdin,
-				output: process.stdout
-			});
-			rl.question(question + '? ', function (answer) {
-				rl.close();
-				if (answer) {
-					resolve(answer);
-				} else {
-					reject(question + ' must be provided');
-				}
-			});
-		});
-	};
+	ask = require('./ask'),
+	EventLogger = require('./eventlogger'),
+	api = new ApiBuilder();
+
 
 module.exports = api;
 
 api.get('/', function (request) {
 	'use strict';
-	var lambdaTimestamp = new Date().toISOString(),
-	clientContext = {
-		'client'  : {
-			'client_id'       : request.context.user || request.lambdaContext.awsRequestId,
-			'app_title'       : request.lambdaContext.functionName,
-			'app_version_name': request.context.stage,
-			'app_version_code': packageJSON.version,
-			'app_package_name': packageJSON.name
-		},
-		'env'     : {
-			'platform'        : 'linux',
-			'platform_version': process.version,
-			'model'           : process.title,
-			'make'            : 'make',
-			'locale'          : 'en_US'
-		},
-		'services': {
-			'mobile_analytics': {
-				'app_id'     : request.env.analyticsAppId,
-				'sdk_name'   : 'aws-sdk-mobile-analytics-js',
-				'sdk_version': '0.9.1' + ':' + AWS.VERSION
-			}
-		},
-		'custom' : {}
-	},
-	event = {
-		eventType: 'lambdaPing',
-		timestamp: new Date().toISOString(),
-		attributes: {
-			awsRequestId: request.lambdaContext.awsRequestId,
-			path: request.context.path,
-			userAgent: request.context.userAgent,
-			sourceIp: request.context.sourceIp,
-			cognitoIdentity: request.lambdaContext.cognitoIdentityId,
-			cognitoAuthenticationProvider: request.lambdaContext.cognitoAuthenticationProvider
-		},
-		session : {
-			'id' :  request.lambdaContext.awsRequestId,
-			'startTimestamp' : lambdaTimestamp
-		},
-		version : 'v2.0',
-		metrics: {
-			progress: 1
+	var logger = new EventLogger(request, request.env.analyticsAppId),
+		name = request.queryString.name || '';
+
+	return logger.logEvent('executed', { name: name }, { length: name.length }).then(function () {
+		if (name) {
+			return 'Logged for ' + name;
+		} else {
+			return 'Logged empty request. Specify ?name= to log with a name';
 		}
-	},
-	params = {
-		clientContext: JSON.stringify(clientContext),
-		events: [event]
-	};
-	mobileanalytics.putEventsAsync = denodeify(mobileanalytics.putEvents);
-	return mobileanalytics.putEventsAsync(params).then(function (result) {
-		return {
-			sent: params,
-			host: mobileanalytics.endpoint.host,
-			received: result
-		};
 	});
 });
 
