@@ -35,10 +35,17 @@ api.get('/', function (request) {
 			'app_version_name': request.context.stage,
 			'app_version_code': packageJSON.version,
 			'app_package_name': packageJSON.name
+		},
+		'services': {
+			'mobile_analytics': {
+				'app_id'     : request.env.analyticsAppId,
+				'sdk_name'   : 'aws-sdk-mobile-analytics-js',
+				'sdk_version': '0.9.1' + ':' + AWS.VERSION
+			}
 		}
 	},
 	event = {
-		eventType: 'hitWithoutEncoding',
+		eventType: 'hitWithService',
 		timestamp: new Date().toISOString(),
 		attributes: {
 			awsRequestId: request.lambdaContext.awsRequestId,
@@ -61,6 +68,7 @@ api.get('/', function (request) {
 	return mobileanalytics.putEventsAsync(params).then(function (result) {
 		return {
 			sent: params,
+			host: mobileanalytics.endpoint.host,
 			received: result
 		};
 	});
