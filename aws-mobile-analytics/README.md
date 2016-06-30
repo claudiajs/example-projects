@@ -12,7 +12,13 @@ Amazon Mobile Analytics is a relatively nice event-logging solution that can agg
 
 ## Using the app
 
-After the initial deployment, Claudia will log the API URL. Open that in a browser and it will log an anonymous event. Add `?name=Tom` to the URL, and it will log an event for `Tom`. About one hour later, check your Amazon Mobile Analytics console, you should see those events in the 'Custom Events' tab.
+After the initial deployment, Claudia will log the API URL.
+
+Open that in a browser and it will log an anonymous event. 
+
+Add `?name=Tom` to the URL, and it will log an event for `Tom`. 
+
+About one hour later, check your Amazon Mobile Analytics console, you should see those events in the 'Custom Events' tab.
 
 ## How it works
 
