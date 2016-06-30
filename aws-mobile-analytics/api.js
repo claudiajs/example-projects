@@ -28,13 +28,21 @@ module.exports = api;
 
 api.get('/', function (request) {
 	'use strict';
-	var clientContext = {
+	var lambdaTimestamp = new Date().toISOString(),
+	clientContext = {
 		'client'  : {
-			'client_id'       : request.env.analyticsAppId,
+			'client_id'       : request.context.user || request.lambdaContext.awsRequestId,
 			'app_title'       : request.lambdaContext.functionName,
 			'app_version_name': request.context.stage,
 			'app_version_code': packageJSON.version,
 			'app_package_name': packageJSON.name
+		},
+		'env'     : {
+			'platform'        : 'linux',
+			'platform_version': process.version,
+			'model'           : process.title,
+			'make'            : 'make',
+			'locale'          : 'en_US'
 		},
 		'services': {
 			'mobile_analytics': {
@@ -42,10 +50,11 @@ api.get('/', function (request) {
 				'sdk_name'   : 'aws-sdk-mobile-analytics-js',
 				'sdk_version': '0.9.1' + ':' + AWS.VERSION
 			}
-		}
+		},
+		'custom' : {}
 	},
 	event = {
-		eventType: 'hitWithService',
+		eventType: 'lambdaPing',
 		timestamp: new Date().toISOString(),
 		attributes: {
 			awsRequestId: request.lambdaContext.awsRequestId,
@@ -54,11 +63,15 @@ api.get('/', function (request) {
 			sourceIp: request.context.sourceIp,
 			cognitoIdentity: request.lambdaContext.cognitoIdentityId,
 			cognitoAuthenticationProvider: request.lambdaContext.cognitoAuthenticationProvider
-		}
-		/*,
+		},
+		session : {
+			'id' :  request.lambdaContext.awsRequestId,
+			'startTimestamp' : lambdaTimestamp
+		},
+		version : 'v2.0',
 		metrics: {
-			progress: 0.1
-		}*/
+			progress: 1
+		}
 	},
 	params = {
 		clientContext: JSON.stringify(clientContext),
