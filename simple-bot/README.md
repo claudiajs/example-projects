@@ -2,8 +2,8 @@
 
 This chat-bot shows how to receive and respond with simple text messages, using the same code for all four supported platforms. 
 
-![](https://claudiajs.github.io/claudiajs.com/assets/supportbot-facebook.gif)
-![](https://claudiajs.github.io/claudiajs.com/assets/supportbot-slack.gif)
+![](https://claudiajs.com/assets/supportbot-facebook.gif)
+![](https://claudiajs.com/assets/supportbot-slack.gif)
 
 ## Try live
 

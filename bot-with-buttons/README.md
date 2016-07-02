@@ -4,7 +4,7 @@ A simple bot demonstrating how to create buttons and post-back actions on Facebo
 
 [Try it live](https://m.me/factbot) using Facebook Messenger.
 
-[![](https://claudiajs.github.io/claudiajs.com/assets/factbot.gif)](https://m.me/factbot)
+[![](https://claudiajs.com/assets/factbot.gif)](https://m.me/factbot)
 
 ## Features
 
