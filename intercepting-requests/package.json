@@ -1,0 +1,16 @@
+{
+  "name": "intercepting-requests",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "claudia create --region us-east-1 --api-module web",
+    "update": "claudia update"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "claudia-api-builder": "^1.5.0"
+  },
+  "devDependencies": {
+    "claudia": "^1.4.4"
+  }
+}
