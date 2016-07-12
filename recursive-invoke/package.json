@@ -1,0 +1,18 @@
+{
+  "name": "recursive-invoke",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "claudia create --region us-east-1 --handler index.handler --allow-recursion --version dev",
+    "test": "claudia test-lambda --event counter.json --version dev"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.4.6"
+  },
+  "devDependencies": {
+    "claudia": "^1.4.4"
+  }
+}
