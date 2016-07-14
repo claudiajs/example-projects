@@ -17,6 +17,7 @@
 * [Web Serving HTML](web-serving-html) &ndash; shows how to change error and success content types and response codes, and how to perform browser redirects
 * [Custom Headers](web-api-custom-headers) &ndash; shows how to return custom headers from API responses
 * [Custom CORS origins](web-api-custom-cors) &ndash; shows how to control allowed CORS origins/headers
+* [Intercepting requests](intercepting-requests) &ndash; an example showing how to prevent or modify requests
 * [Post-deploy variable configuration](web-api-postdeploy-configuration) &ndash; shows how to set up post-deploy hooks to prompt users for stage variables
 * [Generic post-deploy steps](web-api-postdeploy) &ndash; shows how to set up post-deploy hooks for automatic configuration
 * [Using Lambda Context](web-api-lambda-context) &ndash; shows how to access the Lambda Context object from projects built using `claudia-api-builder`
