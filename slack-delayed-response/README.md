@@ -1,6 +1,6 @@
-# Slack bot with delayed response
+# Slack slash commands with delayed responses
 
-This example project shows how to work implement delayed responses to Slack slash commands. Slack limits the time to the first response to 3 seconds, so if you're trying to run a longer task, implementing everything in a single response won't work. 
+This example project shows how to implement delayed responses to Slack slash commands. Slack limits the time to the first response to 3 seconds, so if you're trying to run a longer task, implementing everything in a single response won't work. 
 
 Slack Slash commands support delayed and multiple responses, allowing a bot to respond to a command up to 5 times in 30 minutes.
 
