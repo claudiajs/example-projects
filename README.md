@@ -2,13 +2,13 @@
 
 <img src="https://claudiajs.github.io/claudiajs.com/assets/claudiajs.svg" height="300" align="right" />
 
-## Background processing 
+## Background processing
 
 * [Hello World](hello-world) &ndash; shows a trivial Node.js Lambda function and how to set up deployment using Claudia.js
 * [Using NPM Modules](using-npm-modules) &ndash; a slightly more complex function, shows how to deploy third party dependencies using Claudia.js
 * [S3 File Processing](s3-file-processing) &ndash; an example service that converts files uploaded to S3; shows how to wire up Lambda to respond to S3 events
 * [Website Email Alert](website-email-alert) &ndash; periodically check a URL and send an e-mail if it is not available; shows how to send e-mails using SES and set up Lambda functions as scheduled recurring events
-* [Detecting Context](detecting-context) &ndash; detect if a function was called for development or production, in order to load the right configuration 
+* [Detecting Context](detecting-context) &ndash; detect if a function was called for development or production, in order to load the right configuration
 * [Recursive invocation](recursive-invoke) &ndash; an example of how Lambda can asynchronously call itself to work around timing limitations
 
 ## Web API
@@ -30,6 +30,7 @@
 * [Simple Bot](simple-bot) &ndash; an example demonstrating how to receive and respond with simple text messages
 * [Facebook Messenger Bot with Buttons](bot-with-buttons) &ndash; an example showing how to create more complex platform specific messages, for example Facebook buttons
 * [Space Explorer Bot](https://github.com/stojanovic/space-explorer-bot) &ndash; uses NASA's API to get the data and images about the space, shows how to use Facebook Template builders for response messages.
+* [Slack Delayed Reply](slack-delayed-response) &ndash; an example showing how to send delayed and multiple replies for Slack slash commands.
 
 ## Examples in other repositories
 

@@ -1,0 +1,22 @@
+{
+  "name": "slack-delayed-response",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ntl",
+    "create": "claudia create --api-module bot --region us-east-1 --timeout 120 --allow-recursion --configure-slack-slash-command",
+    "update": "claudia update"
+  },
+  "author": "Slobodan Stojanovic <slobodan@cloudhorizon.com> (http://slobodan.me/)",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.4.6",
+    "claudia-bot-builder": "^1.4.0",
+    "minimal-request-promise": "^1.3.0",
+    "promise-delay": "^2.1.0"
+  },
+  "devDependencies": {
+    "claudia": "^1.4.4"
+  }
+}
