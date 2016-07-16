@@ -1,6 +1,5 @@
 'use strict';
 
-const rp = require('minimal-request-promise');
 const promiseDelay = require('promise-delay');
 const aws = require('aws-sdk');
 const lambda = new aws.Lambda();
@@ -11,8 +10,9 @@ const api = botBuilder((message, apiRequest) => {
   const seconds = parseInt(message.text, 10);
   if (Number.isInteger(seconds) && seconds > 0 && seconds < 61) {
 
-	// Invoke the same Lambda function asynchronously, and do not wait for the response
-	// this allows the initial request to end within three seconds, as requiured by Slack
+	  // Invoke the same Lambda function asynchronously, and do not wait for the response
+	  // this allows the initial request to end within three seconds, as requiured by Slack
+
     return new Promise((resolve, reject) => {
       lambda.invoke({
   			FunctionName: apiRequest.lambdaContext.functionName,
