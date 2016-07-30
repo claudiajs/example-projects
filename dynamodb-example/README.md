@@ -66,7 +66,7 @@ curl -X DELETE <API-URL>/user/123
 
 ## How it works
 
-AWS SDK supports `Promise` calls, and we're using them in the examples directly to make API request processing wait for an external asynchronous call. Just return the promise from the request processor and it all works out of the box. Alternatively, use `.then` on that promise and return something else, to override the result. The `POST` handler creating a new user returns the DynamoDB result directly. The `DELETE` handler replaces the result with a human-readable message.
+AWS SDK supports `Promise` calls, and we're using them in the examples directly to make API request processing wait for an external asynchronous call. Just return the promise from the request processor and it all works out of the box. Alternatively, use `.then` on that promise and return something else, to override the result. The `POST` handler creating a new user returns the DynamoDB result directly. The `GET` handler post-processes the result, returning only a sub-object. The `DELETE` handler replaces the result with a human-readable message.
 
 The table name, stored in the API Gateway stage variables, is passed to each request processor in the `request.env` key-value map. Check out [index.js](index.js) to see it used. 
 

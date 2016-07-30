@@ -17,6 +17,7 @@ api.post('/user', function (request) {
 			age: request.body.age
 		}
 	};
+	// return dynamo result directly
 	return dynamoDb.put(params).promise();
 }, { success: 201 }); // Return HTTP status 201 - Created when successful
 
@@ -32,6 +33,8 @@ api.get('/user/{id}', function (request) {
 			userid: id
 		}
 	};
+
+	// post-process dynamo result before returning
 	return dynamoDb.get(params).promise().then(function (response) {
 		return response.Item;
 	});
@@ -49,8 +52,7 @@ api.delete('/user/{id}', function (request) {
 			userid: id
 		}
 	};
-	// Delete the item using our promisified function
-	// return a nice little message in the .then-clause
+	// return a completely different result when dynamo completes
 	return dynamoDb.delete(params).promise()
 		.then(function () {
 			return 'Deleted user with id "' + id + '"';
