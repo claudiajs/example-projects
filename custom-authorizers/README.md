@@ -4,7 +4,7 @@ This example shows how to configure and use a custom authorizer. This is a trivi
 
 ## Prerequisites
 
-Custom authorizer support requires `claudia-api-builder` 1.6.0, and `claudia 1.7.0`
+Custom authorizer support requires `claudia-api-builder` 1.6.0, and `claudia 1.7.1`
 
 ## Setting it up
 
