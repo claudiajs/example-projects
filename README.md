@@ -7,6 +7,7 @@
 * [Hello World](hello-world) &ndash; shows a trivial Node.js Lambda function and how to set up deployment using Claudia.js
 * [Using NPM Modules](using-npm-modules) &ndash; a slightly more complex function, shows how to deploy third party dependencies using Claudia.js
 * [S3 File Processing](s3-file-processing) &ndash; an example service that converts files uploaded to S3; shows how to wire up Lambda to respond to S3 events
+* [Pandoc S3 Converter](pandoc-s3-converter) &ndash; a more complex example that converts S3 files to .docx using Pandoc
 * [Website Email Alert](website-email-alert) &ndash; periodically check a URL and send an e-mail if it is not available; shows how to send e-mails using SES and set up Lambda functions as scheduled recurring events
 * [Detecting Context](detecting-context) &ndash; detect if a function was called for development or production, in order to load the right configuration
 * [Recursive invocation](recursive-invoke) &ndash; an example of how Lambda can asynchronously call itself to work around timing limitations
