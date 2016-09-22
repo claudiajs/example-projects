@@ -12,5 +12,8 @@
   },
   "devDependencies": {
     "claudia": "^1.x"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.6.4"
   }
 }
