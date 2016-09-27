@@ -16,6 +16,8 @@
 
 * [Web API](web-api) &ndash; a simple REST api, shows how to configure and deploy an API Gateway interface along with the Lambda function
 * [Web Serving HTML](web-serving-html) &ndash; shows how to change error and success content types and response codes, and how to perform browser redirects
+* [Generic handlers](web-api-generic-handlers) &ndash; shows how to capture dynamic paths and set up handlers for any content type easily
+* [Custom response codes](web-api-custom-status-code) &ndash; shows how to change status codes for response
 * [Custom Headers](web-api-custom-headers) &ndash; shows how to return custom headers from API responses
 * [Custom CORS origins](web-api-custom-cors) &ndash; shows how to control allowed CORS origins/headers
 * [Intercepting requests](intercepting-requests) &ndash; an example showing how to prevent or modify requests
@@ -27,6 +29,10 @@
 * [GitHub Repository Labels](github-repo-labels) &ndash; a simple image server, shows how to map URL path components to arguments, how to customise response types and how to connect to third party REST APIs
 * [Using AWS Mobile Analytics for server-side events](aws-mobile-analytics) &ndash; log events into AWS Mobile Analytics for easy internal telemetry
 * [Custom Authorizers](custom-authorizers) &ndash; a simple example of how to set up custom authorizers in API Gateway
+
+## Proxy API
+
+* [Deploying a Proxy API](deploy-proxy-api) &ndash; an example of how to create an API Gateway that will proxy all requests directly to a Lambda function
 
 ## Chat-bots
 

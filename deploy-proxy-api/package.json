@@ -1,0 +1,14 @@
+{
+  "name": "deploy-proxy-api",
+  "version": "1.0.0",
+  "description": "a simple example deploying a proxy API with a Lambda function",
+  "main": "index.js",
+  "scripts": {
+    "start": "claudia create --region us-east-1 --deploy-proxy-api --handler main.handler"
+  },
+  "author": "Gojko Adzic <gojko@gojko.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "claudia": "^2.0.1"
+  }
+}

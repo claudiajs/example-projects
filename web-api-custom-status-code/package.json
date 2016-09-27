@@ -1,0 +1,19 @@
+{
+  "name": "web-api-custom-headers",
+  "description": "An example for returning custom headers from API Gateway responses",
+  "private": true,
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "start": "claudia create --name web-api-custom-headers --region us-east-1 --api-module web",
+    "deploy": "claudia update"
+  },
+  "devDependencies": {
+    "claudia": "^2.0.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.3.4",
+    "claudia-api-builder": "^2.0.0"
+  }
+}

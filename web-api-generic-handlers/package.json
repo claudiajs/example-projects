@@ -1,0 +1,18 @@
+{
+  "name": "web-api-generic-handlers",
+  "description": "Demo project for generic handlers",
+  "private": true,
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "start": "claudia create --region us-east-1 --api-module web",
+    "deploy": "claudia update"
+  },
+  "devDependencies": {
+    "claudia": "^2.0.0"
+  },
+  "dependencies": {
+    "claudia-api-builder": "^2.0.0"
+  }
+}
