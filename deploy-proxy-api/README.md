@@ -1,6 +1,6 @@
 # Deploying Proxy APIs easily
 
-Since September 2017, API Gateway supports proxying requests to Lambda without having to set up specific handlers, methods or conversion templates. This can be a good alternative to using Claudia API Builder if you need to set up something more generic. Claudia 2.0 can automatically deploy a proxy API for your Lambda function -- just add `--deploy-proxy-api` when creating it.  
+Since September 2016, API Gateway supports proxying requests to Lambda without having to set up specific handlers, methods or conversion templates. This can be a good alternative to using Claudia API Builder if you need to set up something more generic. Claudia 2.0 can automatically deploy a proxy API for your Lambda function -- just add `--deploy-proxy-api` when creating it.  
 
 To try out this example, use:
 
