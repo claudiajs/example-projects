@@ -1,0 +1,22 @@
+{
+  "name": "svg-to-pdf-s3-converter",
+  "version": "1.0.0",
+  "description": "Lambda function that waits for SVG files uploaded to S3, converts them to PDF using rsvg-convert and uploads back to S3",
+  "scripts": {
+    "start": "claudia create --region us-east-1 --handler main.handler --no-optional-dependencies --timeout 60 --memory 512",
+    "connect": "claudia add-s3-event-source --bucket test-svg-bucket --prefix in",
+    "update": "claudia update --no-optional-dependencies"
+  },
+  "author": "Gojko Adzic <gojko@gojko.com>",
+  "license": "MIT",
+  "dependencies": {
+    "rsvg-convert-aws-lambda-binary": "^1.0.1",
+    "uuid": "^2.0.2"
+  },
+  "optionalDependencies": {
+    "aws-sdk": "^2.6.2"
+  },
+  "devDependencies": {
+    "claudia": "^2.1.1"
+  }
+}
