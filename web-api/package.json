@@ -16,5 +16,8 @@
     "claudia-api-builder": "^2.0.0",
     "denodeify": "^1.2.1",
     "superb": "^1.2.0"
-  }
+  },
+  "version": "1.0.0",
+  "main": "web.js",
+  "license": "MIT"
 }
