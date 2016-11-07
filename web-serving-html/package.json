@@ -1,6 +1,7 @@
 {
   "name": "web-serving-html-test",
   "description": "An example of how to customise HTTP response codes and content types",
+  "version": "1.0.0",
   "private": true,
   "files": [
     "*.js"

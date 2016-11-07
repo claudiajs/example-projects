@@ -1,6 +1,7 @@
 {
   "name": "web-api-generic-handlers",
   "description": "Demo project for generic handlers",
+  "version": "1.0.0",
   "private": true,
   "files": [
     "*.js"

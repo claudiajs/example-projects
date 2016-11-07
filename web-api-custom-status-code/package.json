@@ -1,6 +1,7 @@
 {
   "name": "web-api-custom-headers",
   "description": "An example for returning custom headers from API Gateway responses",
+  "version": "1.0.0",
   "private": true,
   "files": [
     "*.js"

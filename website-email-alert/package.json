@@ -1,6 +1,7 @@
 {
   "name": "website-email-alert",
   "description": "Send email if a web site is unreachable",
+  "version": "1.0.0",
   "private": true,
   "files": [
     "main.js"

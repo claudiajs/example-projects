@@ -1,6 +1,7 @@
 {
   "name": "s3-file-procesing",
   "description": "Simple example that shows how to act on S3 events",
+  "version": "1.0.0",
   "private": true,
   "files": [
     "*.js"

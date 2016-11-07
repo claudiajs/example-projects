@@ -1,6 +1,7 @@
 {
   "name": "web-api-custom-cors",
   "description": "An example for returning custom CORS origins/headers",
+  "version": "1.0.0",
   "private": true,
   "files": [
     "*.js"
