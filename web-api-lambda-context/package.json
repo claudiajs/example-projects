@@ -9,9 +9,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "claudia-api-builder": "^1.3.0"
+    "claudia-api-builder": "^2.0.2"
   },
   "devDependencies": {
-    "claudia": "^1.4.1"
+    "claudia": "^2.1.5"
   }
 }
