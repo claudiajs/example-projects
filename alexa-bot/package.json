@@ -1,0 +1,16 @@
+{
+  "name": "alexa-spell",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "update": "claudia update --cache-api-config apiConfig --use-local-dependencies",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Slobodan Stojanovic <slobodan@cloudhorizon.com> (http://slobodan.me/)",
+  "license": "ISC",
+  "dependencies": {
+    "claudia-bot-builder": "2.7.0"
+  }
+}
