@@ -1,6 +1,8 @@
 # Amazon Alexa Skill with Claudia Bot Builder
 
-This is an example how to build a simple Alexa skill using Claudia Bot Builder. This skill spells out English language words. [See it in action](https://vimeo.com/192685945) 
+This is an example how to build a simple Alexa skill using Claudia Bot Builder. Bot Builder will handle the parsing and response packaging for the most common scenarios, and you can use the full Alexa API for more advanced processing. To configure your bot with this new interface, use `--configure-alexa-skill` while doing `claudia update`.
+
+This simple skill just spells out English language phrases, and shows how to use simple text requests/responses and more complex Alexa API features. [See it in action](https://vimeo.com/192685945) 
 
 [![Spelling Bee Alexa Skill Demo](https://claudiajs.com/assets/spelling-bee-video-splash.png)](https://vimeo.com/192685945)
 
