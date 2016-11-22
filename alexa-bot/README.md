@@ -1,5 +1,7 @@
 # Amazon Alexa bot with Claudia Bot Builder
 
+This is an example how to build a simple Alexa skill using Claudia Bot Builder.
+
 ## Privacy
 
 This bot keeps no user information.
