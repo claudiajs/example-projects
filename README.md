@@ -42,6 +42,7 @@
 * [Facebook Messenger Bot with Buttons](bot-with-buttons) &ndash; an example showing how to create more complex platform specific messages, for example Facebook buttons
 * [Space Explorer Bot](https://github.com/stojanovic/space-explorer-bot) &ndash; uses NASA's API to get the data and images about the space, shows how to use Facebook Template builders for response messages.
 * [Slack Delayed Reply](slack-delayed-response) &ndash; an example showing how to send delayed and multiple replies for Slack slash commands.
+* [Alexa Skill](alexa-skill) &ndash; an Amazon Echo (Alexa) skill sample that spells out English words 
 
 ## Examples in other repositories
 
