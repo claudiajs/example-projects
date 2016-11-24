@@ -1,0 +1,19 @@
+{
+  "name": "env-variables",
+  "version": "1.0.0",
+  "description": "A simple project demonstrating how to set and access environment variables in AWS Lambda",
+  "main": "",
+  "scripts": {
+    "create": "claudia create --handler lambda.handler --region us-east-1 --version dev --set-env PROGRESS=CREATED,PROJECT_NAME=Development",
+    "update": "claudia update --version dev --set-env PROGRESS=UPDATED,PROJECT_NAME=Development",
+    "set-production": "claudia set-version --version production --set-env PROJECT_NAME=Production",
+    "reassign-dev": "claudia set-version --version dev",
+    "load-from-json": "claudia set-version --version dev --set-env-from-json dev.json",
+    "check-dev": "claudia test-lambda --version dev",
+    "check-production": "claudia test-lambda --version production"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "claudia": "^2.2.0"
+  }
+}

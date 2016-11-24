@@ -6,6 +6,7 @@
 
 * [Hello World](hello-world) &ndash; shows a trivial Node.js Lambda function and how to set up deployment using Claudia.js
 * [Using NPM Modules](using-npm-modules) &ndash; a slightly more complex function, shows how to deploy third party dependencies using Claudia.js
+* [Environment Variables](env-variables) &ndash; setting and using Lambda environment variables
 * [S3 File Processing](s3-file-processing) &ndash; an example service that converts files uploaded to S3; shows how to wire up Lambda to respond to S3 events
 * [Pandoc S3 Converter](pandoc-s3-converter) &ndash; a more complex example that converts S3 files to .docx using Pandoc
 * [SVG to PDF S3 Converter](svg-to-pdf-s3-converter) &ndash; convert SVG files uploaded to S3 to PDF format using RSVG and Cairo
