@@ -1,27 +1,22 @@
 {
-  "name": "github-repo-labels",
+  "name": "repolabels",
   "version": "1.0.0",
   "description": "generate nice SVG labels for github repositories",
-  "main": "api.js",
   "scripts": {
     "start": "claudia create --name github-repo-labels --region us-east-1 --version dev --api-module web",
     "deploy": "claudia update --version dev",
     "release": "claudia set-version --version production"
   },
-  "files": [
-    "*.js",
-    "svg"
-  ],
   "author": "Gojko Adzic <gojko@gojko.com>",
   "license": "MIT",
-  "devDependencies": {
-    "claudia": "^1.0.15"
-  },
   "dependencies": {
-    "bluebird": "^3.3.3",
-    "claudia-api-builder": "^1.0.2",
-    "got": "^5.5.0",
-    "numeral": "^1.5.3",
+    "claudia-api-builder": "^2.3.1",
+    "fs-promise": "^1.0.0",
+    "got": "^6.6.3",
+    "numeral": "^2.0.2",
     "time-ago": "^0.1.0"
+  },
+  "devDependencies": {
+    "claudia": "^2.4.0"
   }
 }

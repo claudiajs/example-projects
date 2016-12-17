@@ -18,7 +18,7 @@ This example demonstrates how to:
 
 ## How it works
 
-The code in [web.js](web.js) just connects to the GitHub developer API to retrieve repository statistics, and then
+The code in [api.js](api.js) just connects to the GitHub developer API to retrieve repository statistics, and then
 performs a simple string replacement on [SVG template files](svg/). The URL request format is:
 
 ```
