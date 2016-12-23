@@ -31,6 +31,7 @@
 * [GitHub Repository Labels](github-repo-labels) &ndash; a simple image server, shows how to map URL path components to arguments, how to customise response types and how to connect to third party REST APIs
 * [Using AWS Mobile Analytics for server-side events](aws-mobile-analytics) &ndash; log events into AWS Mobile Analytics for easy internal telemetry
 * [Custom Authorizers](custom-authorizers) &ndash; a simple example of how to set up custom authorizers in API Gateway
+* [Geo location](api-gw-geolocatio) &ndash; shows how to retrieve the country where your users originated the request
 
 ## Proxy API
 

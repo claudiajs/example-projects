@@ -1,0 +1,19 @@
+{
+  "name": "api-gw-geolocation",
+  "version": "1.0.0",
+  "description": "A simple demonstration of built-in geolocation service with API Gateway",
+  "main": "index.js",
+  "scripts": {
+    "create": "claudia create --region us-east-1 --api-module api",
+    "update": "claudia update"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "claudia-api-builder": "^2.3.1"
+  },
+  "devDependencies": {
+    "claudia": "^2.5.0"
+  }
+}
