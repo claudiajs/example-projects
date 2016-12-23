@@ -2,21 +2,23 @@
 
 <img src="https://claudiajs.github.io/claudiajs.com/assets/claudiajs.svg" height="300" align="right" />
 
-## Background processing
+
+## Hello world
 
 * [Hello World](hello-world) &ndash; shows a trivial Node.js Lambda function and how to set up deployment using Claudia.js
+* [Web API](web-api) &ndash; a simple REST api, shows how to configure and deploy an API Gateway interface along with the Lambda function
+
+## Common Development tasks
+
 * [Using NPM Modules](using-npm-modules) &ndash; a slightly more complex function, shows how to deploy third party dependencies using Claudia.js
+* [Using Babel](babel) &ndash; shows how to deploy transpiled Babel code 
 * [Environment Variables](env-variables) &ndash; setting and using Lambda environment variables
-* [S3 File Processing](s3-file-processing) &ndash; an example service that converts files uploaded to S3; shows how to wire up Lambda to respond to S3 events
-* [Pandoc S3 Converter](pandoc-s3-converter) &ndash; a more complex example that converts S3 files to .docx using Pandoc
-* [SVG to PDF S3 Converter](svg-to-pdf-s3-converter) &ndash; convert SVG files uploaded to S3 to PDF format using RSVG and Cairo
-* [Website Email Alert](website-email-alert) &ndash; periodically check a URL and send an e-mail if it is not available; shows how to send e-mails using SES and set up Lambda functions as scheduled recurring events
 * [Detecting Context](detecting-context) &ndash; detect if a function was called for development or production, in order to load the right configuration
 * [Recursive invocation](recursive-invoke) &ndash; an example of how Lambda can asynchronously call itself to work around timing limitations
 
 ## Web API
 
-* [Web API](web-api) &ndash; a simple REST api, shows how to configure and deploy an API Gateway interface along with the Lambda function
+
 * [Web Serving HTML](web-serving-html) &ndash; shows how to change error and success content types and response codes, and how to perform browser redirects
 * [Generic handlers](web-api-generic-handlers) &ndash; shows how to capture dynamic paths and set up handlers for any content type easily
 * [Custom response codes](web-api-custom-status-code) &ndash; shows how to change status codes for response
@@ -33,6 +35,13 @@
 * [Custom Authorizers](custom-authorizers) &ndash; a simple example of how to set up custom authorizers in API Gateway
 * [Geo location](api-gw-geolocation) &ndash; shows how to retrieve the country where your users originated the request
 
+## Event processing
+
+* [S3 File Processing](s3-file-processing) &ndash; an example service that converts files uploaded to S3; shows how to wire up Lambda to respond to S3 events
+* [Pandoc S3 Converter](pandoc-s3-converter) &ndash; a more complex example that converts S3 files to .docx using Pandoc
+* [SVG to PDF S3 Converter](svg-to-pdf-s3-converter) &ndash; convert SVG files uploaded to S3 to PDF format using RSVG and Cairo
+* [Website Email Alert](website-email-alert) &ndash; periodically check a URL and send an e-mail if it is not available; shows how to send e-mails using SES and set up Lambda functions as scheduled recurring events
+
 ## Proxy API
 
 * [Deploying a Proxy API](deploy-proxy-api) &ndash; an example of how to create an API Gateway that will proxy all requests directly to a Lambda function
@@ -48,6 +57,7 @@
 
 ## Examples in other repositories
 
+* [Quote Bot](https://github.com/philnash/quote-bot), showing how to integrate with Twilio
 * [Slack Ping Command](https://github.com/marcusoftnet/pingu), showing how to create a simple Slack command, pinging a Web URL and reporting the result
 * [State-Action-Model](https://github.com/jdubray/sam-samples/tree/master/crud-blog-lambda) example, showing how to use the [SAM pattern](http://sam.js.org/) to create a Lambda-powered blog
 
