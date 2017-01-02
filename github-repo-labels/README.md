@@ -16,23 +16,12 @@ This example demonstrates how to:
 - Protect API access using API keys
 - reduce costs by caching results using CloudFront
 
+
 ## How it works
 
-The code in [api.js](api.js) just connects to the GitHub developer API to retrieve repository statistics, and then
-performs a simple string replacement on [SVG template files](svg/). The URL request format is:
+Check out the 20 minute video tutorial [How to make a cheap, scalable image server with AWS](https://claudiajs.com/tutorials/image-server.html) for a detailed walk-through.
 
-```
-https://<API ID>.execute-api.<REGION>.amazonaws.com/<STAGE>/<OWNER>/<NAME>/<TEMPLATE>.svg
-```
-
-where:
-
-- `API ID` is the ID of your API (check the `claudia.json` file after deployment)
-- `REGION` is the region where the API is deployed (eg `us-east-1` if you use the standard `package.json`)
-- `STAGE` is the version of the API (eg `dev` or `production`, see the Getting Started section below for more info)
-- `OWNER` is the owner of the GitHub repository you want to create a label for (eg `claudiajs`)
-- `NAME` is the repository name (eg `claudia`)
-- `TEMPLATE` is the name of a file from the [svg](svg) directory used to create the label (eg `large` or `small`)
+[![](https://claudiajs.com/assets/tutorials/image-server-thumb.png)](https://claudiajs.com/tutorials/image-server.html)
 
 ## Getting started
 
