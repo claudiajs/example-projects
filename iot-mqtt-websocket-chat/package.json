@@ -1,0 +1,19 @@
+{
+  "name": "iot-mqtt-websocket-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-device-gateway-signed-url": "github:gojko/aws-device-gateway-signed-url",
+    "claudia-api-builder": "^1.5.1",
+    "denodeify": "^1.2.1"
+  },
+  "devDependencies": {
+    "claudia": "^1.6.2"
+  }
+}
