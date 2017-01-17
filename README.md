@@ -34,6 +34,7 @@
 * [Using AWS Mobile Analytics for server-side events](aws-mobile-analytics) &ndash; log events into AWS Mobile Analytics for easy internal telemetry
 * [Custom Authorizers](custom-authorizers) &ndash; a simple example of how to set up custom authorizers in API Gateway
 * [Geo location](api-gw-geolocation) &ndash; shows how to retrieve the country where your users originated the request
+* [Binary Content](binary-content) &ndash; shows how to configure API Gateway to send or receive binary data
 
 ## Event processing
 

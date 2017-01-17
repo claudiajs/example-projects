@@ -1,0 +1,18 @@
+{
+  "name": "binary-content",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "create": "claudia create --region us-east-1 --api-module main",
+    "update": "claudia update"
+  },
+  "keywords": [],
+  "author": "Gojko Adzic <gojko@neuri.co.uk>",
+  "license": "MIT",
+  "devDependencies": {
+    "claudia": "^2.6.0"
+  },
+  "dependencies": {
+    "claudia-api-builder": "^2.4.0"
+  }
+}
