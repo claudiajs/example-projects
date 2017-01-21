@@ -4,8 +4,6 @@ Inspired by Kevin Old's [project](http://kevinold.com/2016/02/01/serverless-grap
 this is a sample implementation
 a [GraphQL](http://graphql.org/) service on AWS Lambda using Claudia. The service offers CRUD operations via just 1 endpoint. The data persistence is done via
 DynamoDB, similar to the [dynamodb-example](https://github.com/claudiajs/example-projects/tree/master/dynamodb-example).
-Additionally, this sample project is written in ES2015 and is transpiled by
-[Babel](https://babeljs.io/) before uploading to AWS.
 
 ## Prerequisites
 
