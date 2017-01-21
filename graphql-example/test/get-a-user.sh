@@ -6,13 +6,12 @@ if [ ! -n "$API_ID" ]; then
     exit 1
 fi
 
-curl -H 'Content-Type: application/json' -X POST \
+curl -H 'Content-Type: application/graphql' -X POST \
   'https://'${API_ID}'.execute-api.us-east-1.amazonaws.com/latest/graphql' \
-  -d "{query: '{
-  user (userid:\"4\") {
+  -d '{
+  user (userid:"4") {
      userid
      name
      age
   }
 }'
-}"
