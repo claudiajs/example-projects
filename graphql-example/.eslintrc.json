@@ -1,0 +1,24 @@
+{
+  "extends": "crockford",
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "nodejs"
+  },
+  "rules": {
+    "semi": ["error", "always"],
+    "strict": ["error", "global"],
+    "no-unused-vars": "error",
+    "indent": ["error", "tab" ],
+    "no-const-assign": "error",
+    "one-var": "error",
+    "prefer-const": "error",
+    "no-var": "error",
+    "prefer-arrow-callback": "error",
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "quotes": ["error", "single", {"avoidEscape": true, "allowTemplateLiterals": true}]
+  }
+}

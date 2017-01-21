@@ -37,48 +37,41 @@ With GraphQL, there is only 1 endpoint `/latest/graphql` for all CRUD operations
 
 
 ### Create and Update
-Post `application/json` that looks like this:
+Post `application/graphql` that looks like this:
 
 ```json
-{
-  "query": "mutation {
-              addUser (userid:\"2\", name:\"John Doe\", age:29) {
-                userid
-                name
-                age
-              }
-            }"
+mutation {
+  addUser (userid:"2", name:"John Doe", age:29) {
+    userid
+    name
+    age
+  }
 }
 ```
 
 ### Read
-Post `application/json` that looks like this:
+Post `application/graphql` that looks like this:
 
 ```json
-{
-  "query": "{
-              user (userid:\"4\") {
-                 userid
-                 name
-                 age
-              }
-            }"
+user (userid:"4") {
+  userid
+  name
+  age
 }
 ```
 
 ### DELETE
-Post `application/json` that looks like this:
+Post `application/graphql` that looks like this:
 
 ```json
-{
-  "query": "mutation {
-              deleteUser (userid:\"4\") {
-                userid
-                name
-                age
-              }
-            }"
+mutation {
+  deleteUser (userid:"4") {
+    userid
+    name
+    age
+  }
 }
+
 ```
 
 ## Testing
@@ -91,8 +84,3 @@ GraphiQL is an IDE that help user edit and test queries and discover the schema.
 
 ![GraphiQL App](./GraphiQL_app.png "GraphiQL App")
 
-## Transpile ES2015 to ES5
-
-The implementation in this example is written in ES2015 under the `src` folder. It is transpiled to ES5 during `npm create` and `npm deploy` via Babel. See the `npm run tranpile` target at package.json.
-
-> babel --presets es2015 --plugins add-module-exports src --out-dir .
