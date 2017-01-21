@@ -37,7 +37,7 @@ With GraphQL, there is only 1 endpoint `/latest/graphql` for all CRUD operations
 ### Create and Update
 Post `application/graphql` that looks like this:
 
-```json
+```
 mutation {
   addUser (userid:"2", name:"John Doe", age:29) {
     userid
@@ -50,7 +50,7 @@ mutation {
 ### Read
 Post `application/graphql` that looks like this:
 
-```json
+```
 user (userid:"4") {
   userid
   name
@@ -61,7 +61,7 @@ user (userid:"4") {
 ### DELETE
 Post `application/graphql` that looks like this:
 
-```json
+```
 mutation {
   deleteUser (userid:"4") {
     userid
