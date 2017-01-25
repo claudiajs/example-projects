@@ -5,7 +5,7 @@ Since September 2016, API Gateway supports proxying requests to Lambda without h
 To try out this example, use:
 
 1. `npm install` to grab the dependencies
-2. `npm start` to deploy the [api.js](api.js) to Lambda and create a proxy api
+2. `npm start` to deploy the [main.js](main.js) to Lambda and create a proxy api
 
 The procedure will print out a URL. You can send HTTP requests to it, and any sub-URLs, and get back the full request object as the response.
 
