@@ -39,6 +39,7 @@
 ## Event processing
 
 * [S3 File Processing](s3-file-processing) &ndash; an example service that converts files uploaded to S3; shows how to wire up Lambda to respond to S3 events
+* [IOT Topic Filters](iot-topic-filter) &ndash; an example how to trigger a function when a message is posted to an IOT Data Topic
 * [Pandoc S3 Converter](pandoc-s3-converter) &ndash; a more complex example that converts S3 files to .docx using Pandoc
 * [SVG to PDF S3 Converter](svg-to-pdf-s3-converter) &ndash; convert SVG files uploaded to S3 to PDF format using RSVG and Cairo
 * [Website Email Alert](website-email-alert) &ndash; periodically check a URL and send an e-mail if it is not available; shows how to send e-mails using SES and set up Lambda functions as scheduled recurring events

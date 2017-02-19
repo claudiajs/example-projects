@@ -1,0 +1,19 @@
+{
+  "name": "claudia-iot-topic-filter",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "an example for triggering Lambda functions using IOT topic filters",
+  "main": "lambda.js",
+  "scripts": {
+    "create": "claudia create --region us-east-1 --handler lambda.handler",
+    "update": "claudia update",
+    "subscribe": "claudia add-iot-topic-rule --sql \"select * from 'test/+'\"",
+    "check-logs": "aws logs filter-log-events --log-group /aws/lambda/$npm_package_name --filter 'got event'"
+  },
+  "keywords": [],
+  "author": "Gojko Adzic <gojko@gojko.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "claudia": "^2.8.0"
+  }
+}
