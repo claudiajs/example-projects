@@ -10,3 +10,8 @@ This is a trivial example that shows how to trigger Lambda functions when a mess
 4. publish an event to the topic: `node post.js`
 5. list cloudwatch logs associated with your function: `npm run check-logs`  
 
+## More information
+
+* [claudia add-iot-topic-rule options](https://github.com/claudiajs/claudia/blob/master/docs/add-iot-topic-rule.md)
+* [IOT SQL Reference](http://docs.aws.amazon.com/iot/latest/developerguide/iot-sql-reference.html)
+* [AWS IOT Topics](http://docs.aws.amazon.com/iot/latest/developerguide/topics.html)
