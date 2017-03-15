@@ -1,0 +1,17 @@
+{
+  "name": "twilio-shippo",
+  "version": "1.0.0",
+  "description": "An example of how to get tracking updates texted to you using Shippo's webhooks",
+  "main": "app.js",
+  "scripts": {
+		"create": "claudia create --name twilio-shippo --region us-west-2 --api-module app --profile claudia",
+    "update": "claudia update --profile claudia",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Richard Moot",
+  "license": "ISC",
+  "dependencies": {
+    "claudia-api-builder": "^2.4.0",
+    "twilio": "^2.11.1"
+  }
+}
