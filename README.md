@@ -11,7 +11,7 @@
 ## Common Development tasks
 
 * [Using NPM Modules](using-npm-modules) &ndash; a slightly more complex function, shows how to deploy third party dependencies using Claudia.js
-* [Using Babel](babel) &ndash; shows how to deploy transpiled Babel code 
+* [Using Babel](babel) &ndash; shows how to deploy transpiled Babel code
 * [Environment Variables](env-variables) &ndash; setting and using Lambda environment variables
 * [Detecting Context](detecting-context) &ndash; detect if a function was called for development or production, in order to load the right configuration
 * [Recursive invocation](recursive-invoke) &ndash; an example of how Lambda can asynchronously call itself to work around timing limitations
@@ -35,6 +35,7 @@
 * [Custom Authorizers](custom-authorizers) &ndash; a simple example of how to set up custom authorizers in API Gateway
 * [Geo location](api-gw-geolocation) &ndash; shows how to retrieve the country where your users originated the request
 * [Binary Content](binary-content) &ndash; shows how to configure API Gateway to send or receive binary data
+* [Twilio & Shippo webhook](twilio-shippo) &ndash; shows how to create an API endpoint for processing webhook updates using Twilio and Shippo
 
 ## Event processing
 
@@ -55,7 +56,7 @@
 * [Facebook Messenger Bot with Buttons](bot-with-buttons) &ndash; an example showing how to create more complex platform specific messages, for example Facebook buttons
 * [Space Explorer Bot](https://github.com/stojanovic/space-explorer-bot) &ndash; uses NASA's API to get the data and images about the space, shows how to use Facebook Template builders for response messages.
 * [Slack Delayed Reply](slack-delayed-response) &ndash; an example showing how to send delayed and multiple replies for Slack slash commands.
-* [Alexa Skill](alexa-skill) &ndash; an Amazon Echo (Alexa) skill sample that spells out English words 
+* [Alexa Skill](alexa-skill) &ndash; an Amazon Echo (Alexa) skill sample that spells out English words
 
 ## Examples in other repositories
 
