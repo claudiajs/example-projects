@@ -35,7 +35,7 @@
 * [Custom Authorizers](custom-authorizers) &ndash; a simple example of how to set up custom authorizers in API Gateway
 * [Geo location](api-gw-geolocation) &ndash; shows how to retrieve the country where your users originated the request
 * [Binary Content](binary-content) &ndash; shows how to configure API Gateway to send or receive binary data
-* [Twilio & Shippo webhook](twilio-shippo) &ndash; shows how to create an API endpoint for processing webhook updates using Twilio and Shippo
+* [Twilio & Shippo webhook](twilio-shippo-webhook) &ndash; shows how to create an API endpoint for processing webhook updates using Twilio and Shippo
 
 ## Event processing
 
