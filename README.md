@@ -1,4 +1,4 @@
-#Claudia.js Example projects
+# Claudia.js Example projects
 
 <img src="https://claudiajs.github.io/claudiajs.com/assets/claudiajs.svg" height="300" align="right" />
 
