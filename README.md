@@ -49,6 +49,7 @@
 
 * [Deploying a Proxy API](deploy-proxy-api) &ndash; an example of how to create an API Gateway that will proxy all requests directly to a Lambda function
 * [Running Express Apps in AWS Lambda](express-app-lambda) &ndash; an example of how to deploy an existing Express app with minimal changes to Lambda
+* [Running fastify Apps in AWS Lambda](fastify-app-lambda) &ndash; an example of how to deploy an existing fastify app with minimal changes to Lambda
 
 ## Chat-bots
 
