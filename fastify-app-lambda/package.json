@@ -1,0 +1,19 @@
+{
+  "name": "claudia-fastify",
+  "version": "1.0.0",
+  "description": "Example application for running a Node fastify app on AWS Lambda using Amazon API Gateway.",
+  "main": "lambda.js",
+  "scripts": {
+    "deploy": "claudia create --handler lambda.handler --deploy-proxy-api --region us-east-1",
+    "update": "claudia update",
+    "generate-proxy": "claudia generate-serverless-express-proxy --express-module app"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "aws-serverless-express": "^3.0.2",
+    "fastify": "^0.24.0"
+  },
+  "devDependencies": {
+    "claudia": "^2.14.0"
+  }
+}
