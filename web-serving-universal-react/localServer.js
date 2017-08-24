@@ -1,9 +1,5 @@
 'use strict';
-// Node deps
 
-// external deps
-
-// local deps
 const { app } = require('./build/server/bundle');
 const { serverPort } = require('./build/server/bundle');
 
@@ -13,7 +9,5 @@ app.listen(serverPort, () => {
             console.log(r.route.path)
         }
     });
-    console.log(`HumansForget listening on port ${serverPort}!`);
-    // opens the url in the default browser
-    // opn('http://localhost:3000', { app: ['google chrome'] });
+    console.log(`local app listening on port ${serverPort}!`);
 });
