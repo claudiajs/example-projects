@@ -1,0 +1,60 @@
+<html>
+<head>
+</head>
+<body>
+<h2>Front-end part for the Stripe Checkout Payment with Claudia.js</h2>
+
+<form id="myForm">
+  <input title="Amount" type="text" id="amount" />
+</form>
+<button id="customButton">Purchase</button>
+
+<script>
+	window.addEventListener('DOMContentLoaded', function() {
+		var amount,
+      currency = 'eur';
+		var handler = StripeCheckout.configure({
+			key: 'YOUR STRIPE PUBLISHABLE KEY',
+			image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+			locale: 'auto',
+			token: function (token) {
+				fetch('https://your-api-endpoint/create-payment', {
+					method: 'POST',
+					headers: { 'Accept': 'application/json', 'Content-Type': 'application/json'},
+					body: JSON.stringify({
+						stripeToken: token.id,
+						stripeEmail: token.email,
+            amount: amount,
+            currency: currency
+					})
+				}).then( (response) => {
+            console.log(response);
+            alert('payment processed');
+					});
+			}
+		});
+
+		document.getElementById('customButton').addEventListener('click', function(e) {
+			amount = parseFloat(document.getElementById('amount').value);
+			amount = amount * 100;
+			handler.open({
+				name: 'Demo Site',
+				description: '2 widgets',
+				zipCode: true,
+				currency: currency,
+				amount: amount
+			});
+			e.preventDefault();
+		});
+		// Close Checkout on page navigation
+		window.addEventListener('popstate', function() {
+			handler.close();
+		});
+	});
+</script>
+
+<script src="https://checkout.stripe.com/checkout.js" type="text/javascript"></script>
+
+
+</body>
+</html>
