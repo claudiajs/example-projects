@@ -5,7 +5,9 @@ This simple example shows how to implement a Stripe Checkout to create charge se
 Stripe allows your application to create and execute payments.
 
 ## NOTE!
-You need to have proper a front-end implementation. A very basic, simple example implementation in vanilla JavaScript (no frameworks) has been provided. In case you're copying the code, the HTML file **MUST** be removed before your serverless function deployment.
+You need to have proper a front-end implementation. A very basic, simple example implementation in vanilla JavaScript (no frameworks) has been provided.
+
+
 
 ## Prerequisites
 
@@ -27,16 +29,20 @@ That's it.
 
 The code is in the [index.js](index.js).
 
-The frontend part is in the [index-REMOVE-BEFORE-UPLOADING-TO-LAMBDA.html](index-REMOVE-BEFORE-UPLOADING-TO-LAMBDA.html). It **MUST** be removed before deploying your serverless payment Stripe function.
+The frontend part is in the [index](index.html). It's server-rendered by your Lambda.
 
-1. Type in the amount you want to charge, and click pay.
+1. Open your Lambda function endpoint in the browser, type in the amount you want to charge, and click pay.
 2. Type in a test card (4111 1111 1111 1111, EXP: 11/19, CCV: 1111, ZIP: 111111) and your email and click pay.
-3. The request is sent to Stripe - Stripe verifies, handles the data and gives your application the Stripe Token, valid for a few minutes to initiate a charge.
-4. Your frontend application then needs to pack the stripe ID along with the same amount (but in cents) and make a request to your Lambda function on the `/create-payment` endpoint.
-5. Your serverless Lambda function received the data and makes a Stripe charge and returns a response or an error to your frontend app.
+3. The Stripe modal form makes a request to Stripe - Stripe verifies it, handles the data and returns to your frontend the Stripe Token (valid for a few minutes) to initiate a charge.
+4. Your frontend packs the stripe ID along with the same amount (but in cents) and makes a request to your Lambda function endpoint `/create-payment`.
+5. The endpoint receives the data, makes a Stripe charge, and returns either a response or an error (in case something is wrong).
 6. That's it!
 
 
 ## More information
+
+To separate the frontend, in case you already have a frontend app: 
+ 1. Remove the `index.html` file from the project root, open it and add to the endpoint address your AWS Lambda URL.
+ 2. Remove the `api.get` endpoint and handler completely.
 
 Check out the [Stripe Checkout Docs](https://stripe.com/docs/checkout) for more information on Stripe Checkout.

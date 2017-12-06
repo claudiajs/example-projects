@@ -1,9 +1,20 @@
 'use strict';
+
+const fs = require('fs');
 const ApiBuilder = require('claudia-api-builder');
 const api = new ApiBuilder();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 module.exports = api;
+
+api.get('/', () => {
+	return new Promise((resolve, reject) => {
+		fs.readFile('index.html', 'utf8', (err, file) => {
+			if (err) throw err;
+			resolve(file);
+		});
+	});
+}, { success: { contentType: 'text/html'}});
 
 api.post('/create-payment', request => {
 	return stripe.charges.create({

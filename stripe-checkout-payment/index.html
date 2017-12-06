@@ -18,7 +18,7 @@
 			image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
 			locale: 'auto',
 			token: function (token) {
-				fetch('https://your-api-endpoint/create-payment', {
+				fetch('/create-payment', {
 					method: 'POST',
 					headers: { 'Accept': 'application/json', 'Content-Type': 'application/json'},
 					body: JSON.stringify({
