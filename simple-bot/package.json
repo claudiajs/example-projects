@@ -17,11 +17,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "claudia-bot-builder": "^1.0.0",
+    "claudia-bot-builder": "^3",
     "huh": "^1.1.4"
   },
   "devDependencies": {
-    "claudia": "^1.4.1",
+    "claudia": "^3",
     "ntl": "^1.1.2"
   }
 }

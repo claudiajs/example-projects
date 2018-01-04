@@ -11,7 +11,10 @@
   "author": "Richard Moot",
   "license": "ISC",
   "dependencies": {
-    "claudia-api-builder": "^2.4.0",
+    "claudia-api-builder": "^3",
     "twilio": "^2.11.1"
+  },
+  "devDependencies": {
+    "claudia": "^3"
   }
 }

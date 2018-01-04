@@ -10,9 +10,9 @@
     "deploy": "claudia update"
   },
   "devDependencies": {
-    "claudia": "^1.4.1"
+    "claudia": "^3"
   },
   "dependencies": {
-    "claudia-api-builder": "^1.4.1"
+    "claudia-api-builder": "^3"
   }
 }

@@ -12,10 +12,10 @@
   "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.4.3",
-    "claudia-api-builder": "^1.3.0",
+    "claudia-api-builder": "^3",
     "denodeify": "^1.2.1"
   },
   "devDependencies": {
-    "claudia": "^1.4.2"
+    "claudia": "^3"
   }
 }

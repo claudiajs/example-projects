@@ -10,13 +10,13 @@
   "author": "Gojko Adzic <gojko@gojko.com>",
   "license": "MIT",
   "dependencies": {
-    "claudia-api-builder": "^2.3.1",
+    "claudia-api-builder": "^3",
     "fs-promise": "^1.0.0",
     "got": "^6.6.3",
     "numeral": "^2.0.2",
     "time-ago": "^0.1.0"
   },
   "devDependencies": {
-    "claudia": "^2.4.0"
+    "claudia": "^3"
   }
 }

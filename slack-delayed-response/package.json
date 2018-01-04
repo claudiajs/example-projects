@@ -12,10 +12,10 @@
   "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.4.6",
-    "claudia-bot-builder": "^1.4.0",
+    "claudia-bot-builder": "^3",
     "promise-delay": "^2.1.0"
   },
   "devDependencies": {
-    "claudia": "^1.4.4"
+    "claudia": "^3"
   }
 }

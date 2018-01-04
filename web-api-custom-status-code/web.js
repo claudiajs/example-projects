@@ -1,7 +1,6 @@
 /*global require, module*/
 var ApiBuilder = require('claudia-api-builder'),
-	api = new ApiBuilder(),
-	Promise = require('bluebird');
+	api = new ApiBuilder();
 module.exports = api;
 
 // set headers as key-value pairs using the success.headers property */
@@ -25,7 +24,7 @@ api.get('/programmatic-codes', function () {
 
 api.get('/programmatic-codes-promise', function () {
 	'use strict';
-	return Promise.delay(100).then(function () {
+	return Promise.resolve().then(function () {
 		return new api.ApiResponse('OK', {'X-Version': '303', 'Content-Type': 'text/plain'}, 400);
 	});
 });

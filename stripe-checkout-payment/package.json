@@ -11,7 +11,10 @@
   "author": "Aleksandar Simovic <alexander.simovic@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "claudia-api-builder": "^2.5.1",
+    "claudia-api-builder": "^3",
     "stripe": "^5.3.0"
+  },
+  "devDependencies": {
+    "claudia": "^3"
   }
 }

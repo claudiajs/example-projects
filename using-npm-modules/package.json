@@ -12,7 +12,7 @@
     "deploy": "claudia update"
   },
   "devDependencies": {
-    "claudia": "^1.x"
+    "claudia": "^3"
   },
   "dependencies": {
     "superb": "^1.2.0"
