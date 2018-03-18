@@ -1,0 +1,24 @@
+{
+  "name": "test-cors",
+  "version": "1.0.0",
+  "scripts": {
+    "create": "claudia create --api-module api --region $npm_package_config_awsRegion",
+    "update": "claudia update",
+    "serve": "webpack && http-server -c-1",
+    "destroy": "claudia destroy"
+  },
+  "config": {
+    "awsRegion": "us-east-1"
+  },
+  "files": [
+    "api.js"
+  ],
+  "devDependencies": {
+    "claudia": "^3.3.1",
+    "http-server": "^0.11.1",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "claudia-api-builder": "^3.0.2"
+  }
+}
