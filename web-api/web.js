@@ -3,7 +3,7 @@ var ApiBuilder = require('claudia-api-builder'),
 	api = new ApiBuilder(),
 	fs = require('fs'),
 	superb = require('superb'),
-	denodeify = require('denodeify');
+	util = require('util');
 module.exports = api;
 
 // just return the result value for synchronous processing
@@ -34,7 +34,7 @@ api.get('/people/{name}', function (request) {
 // Return a promise for async processing
 api.get('/packagejson', function () {
 	'use strict';
-	var read = denodeify(fs.readFile);
+	var read = util.promisify(fs.readFile);
 	return read('./package.json')
 		.then(JSON.parse)
 		.then(function (val) {

@@ -12,7 +12,7 @@
     "deploy": "claudia update"
   },
   "devDependencies": {
-    "claudia": "^3"
+    "claudia": "^4"
   },
   "dependencies": {
     "aws-sdk": "^2.6.4"

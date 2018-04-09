@@ -12,6 +12,6 @@
     "deploy": "claudia update"
   },
   "devDependencies": {
-    "claudia": "^3"
+    "claudia": "^4"
   }
 }

@@ -19,10 +19,10 @@
   },
   "dependencies": {
     "aws-sdk": "^2.7.27",
-    "claudia-api-builder": "^3",
+    "claudia-api-builder": "^4",
     "graphql": "0.4.18"
   },
   "devDependencies": {
-    "claudia": "^3"
+    "claudia": "^4"
   }
 }

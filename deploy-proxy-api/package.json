@@ -9,6 +9,6 @@
   "author": "Gojko Adzic <gojko@gojko.com>",
   "license": "MIT",
   "devDependencies": {
-    "claudia": "^3"
+    "claudia": "^4"
   }
 }

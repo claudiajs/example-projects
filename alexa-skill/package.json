@@ -10,9 +10,9 @@
   "author": "Slobodan Stojanovic <slobodan@cloudhorizon.com> (http://slobodan.me/)",
   "license": "MIT",
   "dependencies": {
-    "claudia-bot-builder": "^3"
+    "claudia-bot-builder": "^4"
   },
   "devDependencies": {
-    "claudia": "^3"
+    "claudia": "^4"
   }
 }

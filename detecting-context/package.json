@@ -10,6 +10,6 @@
     "call-production": "claudia test-lambda --version production"
   },
   "devDependencies": {
-    "claudia": "^3"
+    "claudia": "^4"
   }
 }

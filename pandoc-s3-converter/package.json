@@ -18,6 +18,6 @@
     "aws-sdk": "^2.6.2"
   },
   "devDependencies": {
-    "claudia": "^3"
+    "claudia": "^4"
   }
 }
