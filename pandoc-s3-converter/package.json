@@ -4,14 +4,14 @@
   "description": "Lambda function that waits for files uploaded to S3, converts them to docx using Pandoc and uploads back to S3",
   "main": "index.js",
   "scripts": {
-    "start": "claudia create --region us-east-1 --handler main.handler",
+    "start": "claudia create --region us-east-1 --handler main.handler --timeout 60 --memory 512",
     "connect": "claudia add-s3-event-source --bucket pandoc-test-bucket --prefix in",
     "update": "claudia update"
   },
   "author": "Gojko Adzic <gojko@gojko.com>",
   "license": "MIT",
   "dependencies": {
-    "pandoc-aws-lambda-binary": "^1.0.0",
+    "pandoc-aws-lambda-binary": "^1.1.0",
     "uuid": "^2.0.2"
   },
   "optionalDependencies": {
