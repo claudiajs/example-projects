@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: A simple demonstration project for claudia packaging
+Outputs:
+  ApiURL:
+    Description: API endpoint URL for Prod environment
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/
+Resources:
+  IndexFunction:
+    Properties:
+      CodeUri: s3://desole-packaging/76c57608c10b8f604dad0260752c399e
+      Events:
+        GetResource:
+          Properties:
+            Method: get
+            Path: /
+          Type: Api
+      Handler: src/index.handler
+      Runtime: nodejs8.10
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
