@@ -15,9 +15,9 @@
 * [Environment Variables](env-variables) &ndash; setting and using Lambda environment variables
 * [Detecting Context](detecting-context) &ndash; detect if a function was called for development or production, in order to load the right configuration
 * [Recursive invocation](recursive-invoke) &ndash; an example of how Lambda can asynchronously call itself to work around timing limitations
+* [Packing for AWS SAM](sam-packaging) &ndash; an example of how to use Claudia to prepare packages for deployment using CloudFormation and AWS SAM
 
 ## Web API
-
 
 * [Web Serving HTML](web-serving-html) &ndash; shows how to change error and success content types and response codes, and how to perform browser redirects
 * [Generic handlers](web-api-generic-handlers) &ndash; shows how to capture dynamic paths and set up handlers for any content type easily
