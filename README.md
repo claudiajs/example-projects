@@ -1,6 +1,6 @@
 # Claudia.js Example projects
 
-<img src="https://claudiajs.github.io/claudiajs.com/assets/claudiajs.svg" height="300" align="right" />
+<img src="https://claudiajs.com/assets/claudia-logo-letters-500.png" height="300" align="right" />
 
 
 ## Hello world
