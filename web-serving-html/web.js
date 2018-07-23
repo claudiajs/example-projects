@@ -34,7 +34,7 @@ api.get('/redirect', function () {
 api.get('/search', function (request) {
 	'use strict';
 	if (request.queryString.name) {
-		return renderPage('<h2>' + request.queryString.name + ' is ' + superb() + '</h2>');
+		return renderPage('<h2>' + request.queryString.name + ' is ' + superb.random() + '</h2>');
 	} else {
 		throw renderPage('<div style="color: red">Please provide a name</a>');
 	}

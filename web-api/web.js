@@ -22,13 +22,13 @@ api.get('/echo', function (request) {
 // use request.queryString for query arguments
 api.get('/greet', function (request) {
 	'use strict';
-	return request.queryString.name + ' is ' + superb();
+	return request.queryString.name + ' is ' + superb.random();
 });
 
 // use {} for dynamic path parameters
 api.get('/people/{name}', function (request) {
 	'use strict';
-	return request.pathParams.name + ' is ' + superb();
+	return request.pathParams.name + ' is ' + superb.random();
 });
 
 // Return a promise for async processing

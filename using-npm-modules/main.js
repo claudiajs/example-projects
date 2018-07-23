@@ -2,5 +2,5 @@
 var superb = require('superb');
 exports.handler = function (event, context) {
 	'use strict';
-	context.succeed(superb());
+	context.succeed(superb.random());
 };

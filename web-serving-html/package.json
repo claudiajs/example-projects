@@ -11,10 +11,10 @@
     "deploy": "claudia update"
   },
   "devDependencies": {
-    "claudia": "^4"
+    "claudia": "^5"
   },
   "dependencies": {
     "claudia-api-builder": "^4",
-    "superb": "^1.2.0"
+    "superb": "^3.0.0"
   }
 }
