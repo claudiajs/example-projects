@@ -30,20 +30,12 @@ var aws = require('aws-sdk'),
 	}, uploadToS3 = function (bucket, fileKey, filePath, acl) {
 		'use strict';
 		console.log('uploading', bucket, fileKey, filePath, acl);
-		return new Promise(function (resolve, reject) {
-			s3.upload({
+		return s3.upload({
 				Bucket: bucket,
 				Key: fileKey,
 				Body: fs.createReadStream(filePath),
 				ACL: acl || 'private'
-			}, function (error, result) {
-				if (error) {
-					reject(error);
-				} else {
-					resolve(result);
-				}
-			})
-		});
+			}).promise();
 	};
 
 module.exports = {
