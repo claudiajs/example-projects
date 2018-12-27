@@ -3,7 +3,7 @@ var path = require('path'),
 	fs = require('fs'),
 	os = require('os'),
 	uuid = require('uuid'),
-	rsvgBinaryPath = path.join(__dirname, 'node_modules', 'rsvg-convert-aws-lambda-binary', 'vendor', 'rsvg-convert'),
+	rsvgBinaryPath = '/opt/bin/rsvg-convert',
 	cpPromise = require('./child-process-promise'),
 	s3 = require('./s3-util');
 

@@ -2,7 +2,7 @@
 
 Lambda function that waits for SVG files uploaded to S3, converts them to PDF using rsvg-convert (librsvg and cairo) and uploads back to S3. 
 
-This example shows how to wire up S3 file conversion that runs an external processor, in this case [rsvg-convert](http://live.gnome.org/LibRsvg). This example project uses a [pre-built binary version of rsvg-convert for AWS Lambda](https://github.com/claudiajs/rsvg-convert-aws-lambda-binary). 
+This example shows how to wire up S3 file conversion that runs an external processor, in this case [rsvg-convert](http://live.gnome.org/LibRsvg). This example project uses a Lambda Layer (`arn:aws:lambda:us-east-1:145266761615:layer:rsvg-convert:2`) containing the [pre-built binary version of rsvg-convert for AWS Lambda](https://github.com/effortless-serverless/rsvg-convert-aws-lambda-binary). 
 
 ## Prerequisites
 
