@@ -1,14 +1,18 @@
-const fastify = require('fastify')();
+const fastify = require('fastify');
 
-fastify.get('/', (request, reply) => reply.send({ hello: 'world' }));
+function init(serverFactory) {
+  const app = fastify({ serverFactory });
+  app.get('/', (request, reply) => reply.send({ hello: 'world' }));
+  return app;
+}
 
 if (require.main === module) {
   // called directly i.e. "node app"
-  fastify.listen(3000, (err) => {
+  init().listen(3000, (err) => {
     if (err) console.error(err);
-    console.log(`server listening on ${fastify.server.address().port}`);
+    console.log('server listening on 3000');
   });
 } else {
   // required as a module => executed on aws lambda
-  module.exports = fastify;
+  module.exports = init;
 }
