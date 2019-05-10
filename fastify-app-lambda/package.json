@@ -10,10 +10,10 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "aws-serverless-express": "^3.0.2",
-    "fastify": "^0.24.0"
+    "aws-serverless-express": "3.3.6",
+    "fastify": "2.1.0"
   },
   "devDependencies": {
-    "claudia": "^4"
+    "claudia": "^5"
   }
 }

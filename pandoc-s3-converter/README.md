@@ -1,6 +1,6 @@
 # Pandoc S3 Lambda converter
 
-Lambda function that waits for files uploaded to S3, converts them to docx using Pandoc and uploads back to S3. 
+Lambda function that waits for files uploaded to S3, converts them to docx using the [Pandoc Lambda Layer](https://github.com/effortless-serverless/pandoc-aws-lambda-binary) and uploads back to S3.
 
 This example shows how to wire up S3 file conversion that runs an external processor, in this case [Pandoc](https://pandoc.org), a Swiss army knife for document conversion. Check out the [Running Pandoc on Lambda Guide](https://claudiajs.com/tutorials/pandoc-lambda.html) for more information.
 

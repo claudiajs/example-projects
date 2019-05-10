@@ -5,8 +5,7 @@ This is a simple example that shows how to deploy an existing [fastify](https://
 ## Running the example
 
 1. run `npm install` to grab the dependencies
-2. run `npm run generate-proxy` to create a simple proxy API for the fastify app
-3. run `npm run deploy` to send everything up to AWS Lambda
+2. run `npm run deploy` to send everything up to AWS Lambda
 
 The third step will print out a URL you can use to access the fastify app.
 
