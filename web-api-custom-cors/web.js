@@ -10,8 +10,9 @@ api.corsHeaders('Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Api-Version')
 /* define a global function that returns an allowed cors origin. this will be used for the OPTIONS access-control-allow-origin response header */
 api.corsOrigin(function (request) {
 	'use strict';
-	if (/claudiajs.com$/.test(request.headers.Origin)) {
-		return request.headers.Origin;
+	console.log('got request', JSON.stringify(request));
+	if (/claudiajs.com$/.test(request.normalizedHeaders.origin)) {
+		return request.normalizedHeaders.origin;
 	}
 	return '';
 });
