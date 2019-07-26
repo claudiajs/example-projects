@@ -1,0 +1,22 @@
+{
+  "name": "web-api-private-gateway",
+  "description": "An example of how to create a private API gateway deployment",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "claudia create --region eu-west-1 --api-module web --vpce $npm_package_security_vpce --account $npm_package_security_account --security-group-ids $npm_package_security_group --subnet-ids $npm_package_security_subnets"
+  },
+  "security": {
+    "account": "Your account number goes here",
+    "group": "Your security group ID goes here",
+    "vpce": "Your VPCE ID goes here",
+    "subnets": "Your subnet ID's go here"
+
+  },
+  "devDependencies": {
+    "claudia": "^4"
+  },
+  "dependencies": {
+    "claudia-api-builder": "^4"
+  }
+}
