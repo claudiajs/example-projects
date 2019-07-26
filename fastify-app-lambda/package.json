@@ -10,8 +10,8 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "aws-lambda-fastify": "1.0.2",
-    "fastify": "2.1.0"
+    "aws-lambda-fastify": "1.0.3",
+    "fastify": "2.6.0"
   },
   "devDependencies": {
     "claudia": "^5"
